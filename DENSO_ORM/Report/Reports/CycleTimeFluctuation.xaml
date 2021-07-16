@@ -1,0 +1,91 @@
+﻿<Page x:Class="DENSO_ORM.Report.Reports.CycleTimeFluctuation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Report.Reports"
+     Style="{StaticResource PageStyle}"
+      Title="CycleTimeFluctuation"  Loaded="Window_Loaded" KeyDown="Page_KeyDown" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <TextBlock Text="CYCLE TIME FLACTUATION REPORT" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="20" Margin="23,10,19.727,10" Foreground="OrangeRed" FontWeight="ExtraBold" ></TextBlock>
+            <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,30,0,0" Height="55" Width="310"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg" Grid.ColumnSpan="2"/>
+        </Grid>
+
+        <Border Style="{StaticResource BorderStyle}" HorizontalAlignment="Center"  Margin="0,100,0,0" VerticalAlignment="Top" >
+            <Grid Margin="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                    <ColumnDefinition Width="350"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35">
+                    </RowDefinition>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="{Binding}">
+                    </RowDefinition>
+                    <RowDefinition Height="{Binding}">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <DatePicker SelectedDateChanged="DtpFrom_SelectedDateChanged" ToolTip="From date" BorderBrush="Transparent" Width="180" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" Name="dtpFrom"  />
+                <DatePicker SelectedDateChanged="DtpTo_SelectedDateChanged" ToolTip="To date"  BorderBrush="Transparent" Width="180" Margin="0,0,-6,0" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="1" Name="dtpTo"   />
+                <CheckBox Unchecked="ChkShift_Unchecked" Checked="ChkShift_Checked" Name="chkShift" Content="Select All" Margin="16,5,0,0" Grid.Column="2" Grid.Row="3" VerticalAlignment="Top"/>
+
+                <ListBox BorderBrush="Black" BorderThickness="2"  Grid.Row="3"  Grid.Column="1" Margin="3,25,0,0" HorizontalAlignment="Left"  Name="listShift" VerticalAlignment="Top" Width="300" Background="White">
+                    <ListBox.ItemTemplate>
+                        <HierarchicalDataTemplate>
+                            <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="{Binding ShiftName}" IsChecked="{Binding Flag}"/>
+                        </HierarchicalDataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <CheckBox Unchecked="ChkModel_Unchecked" Checked="ChkModel_Checked" Name="chkModel" Content="Select All" Margin="16,5,0,0" Grid.Column="2" Grid.Row="4" VerticalAlignment="Top"/>
+
+                <ListBox BorderBrush="Black" BorderThickness="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="4" Grid.Column="1" Margin="3,25,0,0" HorizontalAlignment="Left"  Name="listModel" VerticalAlignment="Top" Width="300" Background="White">
+                    <ListBox.ItemTemplate>
+                        <HierarchicalDataTemplate>
+                            <CheckBox Content="{Binding ModelName}" IsChecked="{Binding Flag}"/>
+                        </HierarchicalDataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                           <Label Grid.Row="1" Content="Line Name:"  />
+                <Label Grid.Row="0" Grid.Column="0"  Content="Line Group:"  />
+                <Label Grid.Row="4" Grid.Column="0"  Content="Model No:"  />
+                <Label Grid.Row="3" Grid.Column="0"  Content="Shift Name:"  />
+                <Label Content="Date:" Grid.Row="2" Grid.Column="0"></Label>
+                <TextBox HorizontalAlignment="Left" Height="30" Margin="0,2,0,0" TextWrapping="Wrap" Text="" x:Name="txtlinegrp" VerticalAlignment="Top" Width="340" IsReadOnly="True" Grid.Column="1"/>
+                <TextBox HorizontalAlignment="Left" Height="30" Margin="0,5,0,0" TextWrapping="Wrap" Text="" x:Name="txtlinename" VerticalAlignment="Top" Width="340" Grid.Row="1" IsReadOnly="True" TextChanged="Txtlinename_TextChanged" Grid.Column="1" />
+            </Grid>
+        </Border>
+
+        <Border Style="{StaticResource BorderStyle}" Margin="0,305,0,9" VerticalAlignment="Bottom" HorizontalAlignment="Center" >
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button ToolTip="Alt+S for Show" Name="btnShow" Grid.Column="0" Click="BtnShow_Click" HorizontalAlignment="Left" Width="95" >
+                    <TextBlock><Underline>S</Underline>HOW</TextBlock>
+                </Button>
+                <Button ToolTip="Alt+c for CLEAR" Name="btnClear" Grid.Column="1" Click="BtnClear_Click" Height="35" VerticalAlignment="Top" >
+                    <TextBlock><Underline>C</Underline>LEAR</TextBlock>
+                </Button>
+                <Button ToolTip="Alt+E for EXIT" Name="btnBack" Grid.Column="2" Click="BtnExit_Click" >
+                    <TextBlock><Underline>B</Underline>ACK</TextBlock>
+                </Button>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

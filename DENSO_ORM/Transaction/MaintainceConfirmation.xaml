@@ -1,0 +1,95 @@
+﻿<Page x:Class="DENSO_ORM.Transaction.MaintainceConfirmation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Transaction"
+     Loaded="Window_Loaded" KeyDown="Window_KeyDown" Style="{StaticResource PageStyle}" Title="MaintainceConfirmation" Unloaded="Page_Unloaded">
+    <Grid >
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+            <TextBlock Text="MAINTENANCE CONFIRMATION" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="20" Margin="10" Foreground="OrangeRed" FontWeight="ExtraBold" ></TextBlock>
+            <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,27,0,0" Height="55" Width="290"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg"/>
+
+        </Grid>
+        <Border Style="{StaticResource BorderStyle}" HorizontalAlignment="Center"  Margin="0,90,0,0" VerticalAlignment="Top" >
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                    <ColumnDefinition Width="350"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="85">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="txtStation" Grid.Column="1"  Grid.Row="2" IsReadOnly="True" />
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="85" Grid.Row="3" x:Name="txtReason" TextWrapping="Wrap" Text="" BorderThickness="2" AcceptsReturn="True"  VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="350"/>
+                <Label Grid.Row="1" Content="Line Name:"  />
+                <Label Grid.Row="0" Grid.Column="0"  Content="Line Group:"  />
+                <Label Grid.Row="2" Grid.Column="0"  Content="STATION:"  />
+                <Label Grid.Row="3" Grid.Column="0"  Content="REASON:"  />
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,2,0,0" TextWrapping="Wrap" Text="" x:Name="txtlinegrp" VerticalAlignment="Top" Width="340" IsReadOnly="True"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" x:Name="txtlinename" VerticalAlignment="Top" Width="340" Grid.Row="1" IsReadOnly="True"  />
+
+            </Grid>
+        </Border>
+        <Border  Style="{StaticResource BorderStyle}" Margin="0,384,0,10" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <Grid Margin="7">
+                <DataGrid  x:Name="dvgMasterDeatils" SelectionChanged="dvgMasterDeatils_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="auto" Header="  Refno " Visibility="Hidden" ElementStyle="{StaticResource WrapText}"  Binding="{Binding Refno}" />
+                        <DataGridTextColumn Width="auto" Header=" SLNO  " ElementStyle="{StaticResource WrapText}"  Binding="{Binding SLNO}" />
+                        <DataGridTextColumn Width="auto" Header="  LINE GROUP " ElementStyle="{StaticResource WrapText}" Binding="{Binding MachineGroupName}" />
+                        <DataGridTextColumn Width="auto" Header="  LINE NAME " ElementStyle="{StaticResource WrapText}" Binding="{Binding MachineName}" />
+                        <DataGridTextColumn Width="auto" Header="  STATION " ElementStyle="{StaticResource WrapText}" Binding="{Binding Operation}" />
+                        <DataGridTextColumn Width="auto" Header=" CALL ON" ElementStyle="{StaticResource WrapText}" Binding="{Binding CreatedOn}" />
+                        <DataGridTextColumn Width="auto" Header=" CALL REASON" ElementStyle="{StaticResource WrapText}" Binding="{Binding Remarks}" />
+                        <DataGridTextColumn Width="auto" Header=" CONFIRMATION ON" ElementStyle="{StaticResource WrapText}" Binding="{Binding ConfirmOn}" />
+                        <DataGridTextColumn Width="auto" Header=" CONFIRMATION REASON" ElementStyle="{StaticResource WrapText}" Binding="{Binding ConfirmRemarks}" />
+                        <DataGridTextColumn Width="auto" Header=" CLOSE ON" ElementStyle="{StaticResource WrapText}" Binding="{Binding CloseOn}" />
+                        <DataGridTextColumn Width="auto" Header=" CLOSE REASON" ElementStyle="{StaticResource WrapText}" Binding="{Binding CloseRemarks}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,325,0,0"  >
+            <Grid Margin="5" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="165"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="Press Alt+S for Save"  x:Name="btnSave" Click="btnSave_Click" HorizontalAlignment="Right" Margin="0" Width="115" >
+                    <TextBlock x:Name="btnSaveText"><Underline><Run Text="C"/></Underline><Run Text="ALL M/T"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+U for Update" Grid.Column="1"  x:Name="btnUpdate" Click="btnUpdate_Click"
+                    TabIndex="7" >
+                    <TextBlock><Underline><Run Text="M"/></Underline><Run Text="/T CONFIRM"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+C for Clear"  Grid.Column="2"  x:Name="btnJobClose" Click="BtnJobClose_Click"  TabIndex="8" >
+                    <TextBlock><Underline><Run Text="J"/></Underline><Run Text="OB CLOSE"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+C for Clear"  Grid.Column="3"  x:Name="btnClear" Click="btnClear_Click"  TabIndex="8" >
+                    <TextBlock><Underline><Run Text="C"/></Underline><Run Text="LEAR"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+B for Back" Grid.Column="4"  x:Name="btnExit" Click="btnExit_Click" TabIndex="9" >
+                    <TextBlock><Underline><Run Text="B"/></Underline><Run Text="ACK"/></TextBlock>
+                </Button>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

@@ -1,0 +1,69 @@
+﻿<Page x:Class="DENSO_ORM.Transaction.MachineStop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DENSO_ORM.Transaction"
+        mc:Ignorable="d"
+        Title="MachineStop" Background="Black" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+    <Grid>
+      
+        <Grid Background="DimGray" Margin="5,15,150,0" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{Binding}"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock  Name="txtType" Text="PLANNED"  Foreground="White" FontSize="50" Margin="0,0,0,0" FontWeight="ExtraBold"  VerticalAlignment="Center" TextAlignment="Center"  HorizontalAlignment="Stretch" Grid.Column="0"></TextBlock>
+        </Grid>
+        <Grid Background="Yellow" Margin="0,15,5,0" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Name="txtTime" Background="SeaGreen"  Text="TIME" HorizontalAlignment="Right"  Grid.Column="0" Foreground="White" FontSize="50" FontWeight="ExtraBold"   VerticalAlignment="Center" TextAlignment="Center" >
+            </TextBlock>
+        </Grid>
+       
+        <Grid Background="Beige" HorizontalAlignment="Stretch" Margin="5,90,5,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{Binding}"></ColumnDefinition>
+                <ColumnDefinition Width="{Binding}"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border  BorderBrush="White" Grid.Column="0" BorderThickness="2" Background="Black"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="280"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Name="imgSmily1" Stretch="Fill" VerticalAlignment="Center"  Height="250" Width="250"  Source="/DENSO_ORM;component/Images/STOPED.png"/>
+
+                </Grid>
+            </Border>
+            <Border  BorderBrush="White" Grid.Column="1" BorderThickness="2" Background="Black" Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="280"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock TextWrapping="Wrap" Name="txtActToatl"  Text="SHIFT OR - NA" HorizontalAlignment="Center"  Grid.Column="0" Foreground="DarkTurquoise" FontSize="120" FontWeight="ExtraBold" Margin="0,-10,0,0"  VerticalAlignment="Center" TextAlignment="Center" >
+                    </TextBlock>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border VerticalAlignment="Stretch" BorderBrush="White" BorderThickness="3" Margin="5,370,5,5" HorizontalAlignment="Stretch">
+            <Grid Name="GReasn" Background="Green">
+                <!--<Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock  TextWrapping="Wrap"  Text="REASON FOR STOP :-"  HorizontalAlignment="Left"  Grid.Column="0" Foreground="Black" FontSize="125" FontWeight="ExtraBold"   VerticalAlignment="Center" TextAlignment="Center" >
+                </TextBlock>
+                <TextBlock Width="1300" Name="TxtReason" TextWrapping="Wrap"  Text="LINE UNDER PLANNED STOP"  HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" Foreground="White" FontSize="95" FontWeight="ExtraBold"   VerticalAlignment="Center" TextAlignment="Center" >
+                </TextBlock>
+            </Grid>
+
+        </Border>
+    </Grid>
+</Page>

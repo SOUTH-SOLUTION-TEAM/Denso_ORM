@@ -1,0 +1,117 @@
+﻿<Page x:Class="DENSO_ORM.Transaction.MachineONandOFF"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Transaction" 
+      Title="MachineONandOFF" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Style="{StaticResource PageStyle}" Unloaded="Page_Unloaded">
+    <Grid >
+      
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <TextBlock Text="MACHINE ON AND OFF" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="20" Margin="10" Foreground="OrangeRed" FontWeight="ExtraBold" ></TextBlock>
+            <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,27,0,0" Height="55" Width="220"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg"/>
+
+        </Grid>
+        
+        <Border Style="{StaticResource BorderStyle}" HorizontalAlignment="Center"  Margin="170,90,170,0" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+            <Grid Margin="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                    <ColumnDefinition Width="350"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                    <RowDefinition Height="40">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" Content="Line Name:"  />
+                <Label Grid.Row="0" Grid.Column="0"  Content="Line Group:"  />
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="5,5,0,0" TextWrapping="Wrap" Text="" x:Name="txtlinegrp" VerticalAlignment="Top" Width="340" IsReadOnly="True"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" x:Name="txtlinename" VerticalAlignment="Top" Width="340" Grid.Row="1" IsReadOnly="True" Margin="5,5,0,0" TextChanged="Txtlinename_TextChanged" />
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" HorizontalAlignment="Center"  Margin="0,195,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"  >
+            <Grid Margin="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <ComboBox x:Name="cmbshift"  Grid.Row="0"  Grid.Column="1"  SelectionChanged="Cmbshift_SelectionChanged" />
+                <DatePicker  BorderBrush="Transparent" Grid.Column="3"  Grid.Row="0" x:Name="Date"></DatePicker>
+                <TextBox PreviewTextInput="Txtshift1_PreviewTextInput" Grid.Row="1" HorizontalAlignment="Left" TextAlignment="Center"  Width="60" x:Name="txtshift1" MaxLength="2" Grid.Column="1" />
+                <TextBox PreviewTextInput="Txtshift1_PreviewTextInput" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" TextAlignment="Center"  Margin="75,0,0,0" Width="60" x:Name="txtshift2" MaxLength="2" />
+                <TextBox PreviewTextInput="Txtshift1_PreviewTextInput"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" TextAlignment="Center" Margin="170,0,0,0" Width="60" x:Name="txtshift3" MaxLength="2" />
+                <TextBox  PreviewTextInput="Txtshift1_PreviewTextInput" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" TextAlignment="Center" Margin="240,0,0,0" Width="60" x:Name="txtshift4" MaxLength="2" />
+                <ComboBox x:Name="cmbPrbCode"  Grid.Row="1"  Grid.Column="3"  />
+                <TextBox  Grid.Row="2" Grid.Column="1"  Grid.ColumnSpan="3"  x:Name="txtRemarks"  />
+
+                <Label Grid.Row="0" Content="Date:" Grid.Column="2"  />
+                <Label Grid.Row="0" Content="Shift:"  />
+                <Label Grid.Row="1" Content="Time:"   />
+                <Label Content=":" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="60,0,0,0"  />
+                <Label Content=":" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="228,0,0,0"/>
+                <Label Grid.Row="1" Grid.Column="2" Content="Problem Code:" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Remarks:" />
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="70,340,70,0" Grid.ColumnSpan="2"  >
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="Press Alt+S for Save"  x:Name="btnSave" Click="btnSave_Click" >
+                    <TextBlock x:Name="btnSaveText"><Underline><Run Text="P"/></Underline><Run Text="LANNED OFF"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+U for Update" Grid.Column="1"  x:Name="btnUpdate" Click="btnUpdate_Click">
+                    <TextBlock ><Underline><Run Text="U"/></Underline><Run Text="NPLANNED OFF"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+D for Delete" Grid.Column="2"  x:Name="btnDelete" Click="btnDelete_Click">
+                    <TextBlock><Underline><Run Text="C"/></Underline><Run Text="ANCEL OFF"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+C for Clear"  Grid.Column="3"  x:Name="btnClear" Click="btnClear_Click">
+                    <TextBlock><Underline><Run Text="C"/></Underline><Run Text="LEAR"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+B for Back" Grid.Column="4"  x:Name="btnExit" Click="btnExit_Click">
+                    <TextBlock><Underline><Run Text="B"/></Underline><Run Text="ACK"/></TextBlock>
+                </Button>
+            </Grid>
+        </Border>
+        <Border  Style="{StaticResource BorderStyle}" Margin="124,400,124,10" VerticalAlignment="Stretch" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+            <Grid Margin="7">
+                <DataGrid ToolTip="Single selection is for edit all columns and multiple selection is for delete data" x:Name="dvgMasterDeatils"  >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn  Width="auto" Header="  SLNO  " ElementStyle="{StaticResource WrapText}"  Binding="{Binding SLNO}" />
+                        <DataGridTextColumn Width="auto" Header="  refno  " Visibility="Hidden"  ElementStyle="{StaticResource WrapText}"  Binding="{Binding REFNO}" />
+                        <DataGridTextColumn Width="auto" Header="  LINE GROUP" ElementStyle="{StaticResource WrapText}" Binding="{Binding MachineGrName}" />
+                        <DataGridTextColumn Width="auto" Header="  LINE NAME " ElementStyle="{StaticResource WrapText}" Binding="{Binding MachineName}" />
+                        <DataGridTextColumn Width="auto" Header="  DATE " ElementStyle="{StaticResource WrapText}" Binding="{Binding Date}" />
+                        <DataGridTextColumn Width="auto" Header="  SHIFT " ElementStyle="{StaticResource WrapText}" Binding="{Binding ShiftName}" />
+                        <DataGridTextColumn Width="auto" Header="  TIME " ElementStyle="{StaticResource WrapText}" Binding="{Binding ShiftTiming}" />
+                        <DataGridTextColumn Width="auto" Header="  PROBLEM CODE " ElementStyle="{StaticResource WrapText}" Binding="{Binding ProblemCode}" />
+                        <DataGridTextColumn Width="auto" Header="  REMARKS " ElementStyle="{StaticResource WrapText}" Binding="{Binding Remarks}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

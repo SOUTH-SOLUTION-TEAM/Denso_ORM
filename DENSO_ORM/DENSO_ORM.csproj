@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA04724C-21FF-4786-BAB1-26802E36E855}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DENSO_ORM</RootNamespace>
+    <AssemblyName>DENSO_ORM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <EnableSecurityDebugging>true</EnableSecurityDebugging>
+    <StartAction>URL</StartAction>
+    <HostInBrowser>true</HostInBrowser>
+    <TargetZone>Internet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Projects\DENSO\Denso_ORM\Denso_ORM\DENSO_ORM\Publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>170</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BUSINESS_LAYER">
+      <HintPath>..\BUSINESS_LAYER\bin\Debug\BUSINESS_LAYER.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EasyModbus">
+      <HintPath>C:\Users\sar.puttaraju.ah\Desktop\EasyModbusTCP .NET Package V5.5\EasyModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="ENTITY_LAYER">
+      <HintPath>..\ENTITY_LAYER\bin\Debug\ENTITY_LAYER.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\SAPBusinessObjects.WPF.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\SAPBusinessObjects.WPF.ViewerShared.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit">
+      <HintPath>C:\Users\sar.puttaraju.ah\Downloads\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Compile Include="CommonClasses\PLC_Connectivity.cs" />
+    <Compile Include="Masters\ColorMaster.xaml.cs">
+      <DependentUpon>ColorMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Defect_ProblemMaster.xaml.cs">
+      <DependentUpon>Defect_ProblemMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\DeviceIPandPortConfiguration.xaml.cs">
+      <DependentUpon>DeviceIPandPortConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\GroupMaster.xaml.cs">
+      <DependentUpon>GroupMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Kanban_Progress.xaml.cs">
+      <DependentUpon>Kanban_Progress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MachineGroup.xaml.cs">
+      <DependentUpon>MachineGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\ModuleMaster.xaml.cs">
+      <DependentUpon>ModuleMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\ShiftMaster.xaml.cs">
+      <DependentUpon>ShiftMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\SMSandVoiceCallConfiguration.xaml.cs">
+      <DependentUpon>SMSandVoiceCallConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\UserMaster.xaml.cs">
+      <DependentUpon>UserMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CrystallReport\CallandResponse.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CallandResponse.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\CycleTimeFlactuation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CycleTimeFlactuation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\CycleTimeFluctuationGraph.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CycleTimeFluctuationGraph.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\Dekidaka.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dekidaka.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\KanbanProgress.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KanbanProgress.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\LossHour.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LossHour.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\ManHour.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManHour.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\OperationRatio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperationRatio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystallReport\Ratio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ratio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Dataset\ORMReports.cs">
+      <DependentUpon>ORMReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Dataset\ORMReports.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ORMReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\CallAndResponse.xaml.cs">
+      <DependentUpon>CallAndResponse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\CycleTimeFluctuation.xaml.cs">
+      <DependentUpon>CycleTimeFluctuation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\CycleTimeFluctuationforGraph.xaml.cs">
+      <DependentUpon>CycleTimeFluctuationforGraph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\Dekidaka.xaml.cs">
+      <DependentUpon>Dekidaka.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\KanbanAchievement.xaml.cs">
+      <DependentUpon>KanbanAchievement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\KPI.xaml.cs">
+      <DependentUpon>KPI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\LossHour.xaml.cs">
+      <DependentUpon>LossHour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\OperationRatio.xaml.cs">
+      <DependentUpon>OperationRatio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Reports\ReportViewer.xaml.cs">
+      <DependentUpon>ReportViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\ChangePassword.xaml.cs">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\DatabaseSetting.xaml.cs">
+      <DependentUpon>DatabaseSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\5M1EChanges.xaml.cs">
+      <DependentUpon>5M1EChanges.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\5Mand1E.xaml.cs">
+      <DependentUpon>5Mand1E.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\AndonSMSandCall .xaml.cs">
+      <DependentUpon>AndonSMSandCall .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\AndonSMSandCallForSmallManitor.xaml.cs">
+      <DependentUpon>AndonSMSandCallForSmallManitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\CycleTimeFluctuation .xaml.cs">
+      <DependentUpon>CycleTimeFluctuation .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\DashBoard.xaml.cs">
+      <DependentUpon>DashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Dekidaka.xaml.cs">
+      <DependentUpon>Dekidaka.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\KanbanProcessSystem.xaml.cs">
+      <DependentUpon>KanbanProcessSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\KPIEntry.xaml.cs">
+      <DependentUpon>KPIEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\LossEntry.xaml.cs">
+      <DependentUpon>LossEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\MachineONandOFF .xaml.cs">
+      <DependentUpon>MachineONandOFF .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\MachineSelection.xaml.cs">
+      <DependentUpon>MachineSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\MachineStop.xaml.cs">
+      <DependentUpon>MachineStop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\MaintainceConfirmation.xaml.cs">
+      <DependentUpon>MaintainceConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\ManPowerEntry.xaml.cs">
+      <DependentUpon>ManPowerEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\ORMonitoringSystem.xaml.cs">
+      <DependentUpon>ORMonitoringSystem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Probem_Code.xaml.cs">
+      <DependentUpon>Probem_Code.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Scrap.xaml.cs">
+      <DependentUpon>Scrap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\StockVisualisation.xaml.cs">
+      <DependentUpon>StockVisualisation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DENSO_ORM_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Page Include="Masters\ColorMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Masters\Defect_ProblemMaster.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Masters\DeviceIPandPortConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Masters\GroupMaster.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Masters\Kanban_Progress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Masters\MachineGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Masters\ModuleMaster.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Masters\ShiftMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Masters\SMSandVoiceCallConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Masters\UserMaster.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonClasses\CommonMethods.cs" />
+    <Compile Include="CommonClasses\CommonVariable.cs" />
+    <Page Include="Report\Reports\CallAndResponse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\CycleTimeFluctuation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\CycleTimeFluctuationforGraph.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\Dekidaka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\KanbanAchievement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\KPI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\LossHour.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\OperationRatio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\Reports\ReportViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartUp\ChangePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartUp\DatabaseSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartUp\ForgotPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartUp\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartUp\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\5M1EChanges.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\5Mand1E.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\AndonSMSandCall .xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\AndonSMSandCallForSmallManitor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\CycleTimeFluctuation .xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\DashBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\Dekidaka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\KanbanProcessSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\KPIEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\LossEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\MachineONandOFF .xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\MachineSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\MachineStop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\MaintainceConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\ManPowerEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\ORMonitoringSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\Probem_Code.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\Scrap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Transaction\StockVisualisation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\CallandResponse.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CallandResponse.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\CycleTimeFlactuation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CycleTimeFlactuation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\CycleTimeFluctuationGraph.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CycleTimeFluctuationGraph.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\Dekidaka.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dekidaka.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\KanbanProgress.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KanbanProgress.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\LossHour.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LossHour.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\ManHour.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ManHour.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\OperationRatio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OperationRatio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystallReport\Ratio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ratio.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\DEKIDAKA.xlsx" />
+    <Resource Include="barcode_GDL_icon.ico" />
+    <Content Include="DEKIDAKA.xlsx" />
+    <Content Include="DAILY_DPR.xlsm" />
+    <None Include="DENSO_ORM_TemporaryKey.pfx" />
+    <Content Include="MMR.xlsx" />
+    <Content Include="OR.xlsx" />
+    <Content Include="PIM.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Report\Dataset\ORMReports.xsc">
+      <DependentUpon>ORMReports.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dataset\ORMReports.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ORMReports.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Dataset\ORMReports.xss">
+      <DependentUpon>ORMReports.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\DENSO_ORM_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DENSO_ORM_Service\Service1.wsdl" />
+    <None Include="Web References\DENSO_ORM_Service\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\DENSO_ORM_Service\Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\DENSO_ORM_Service\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sql-server-icon-png-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChangePassword.jpg" />
+    <Resource Include="Images\error.png" />
+    <Resource Include="Images\Exclamation.png" />
+    <Resource Include="Images\forget-password .png" />
+    <Resource Include="Images\Information.png" />
+    <Resource Include="Images\Question.png" />
+    <Resource Include="Images\SatoLogo.png" />
+    <Resource Include="Images\Successfull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HorizantalLine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Denso-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.43.236/DENSO_ORM/Service1.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DENSO_ORM_Service\</RelPath>
+      <UpdateFromURL>http://192.168.43.236/DENSO_ORM/Service1.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DENSO_ORM_DENSO_ORM_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\DENSO_ORM_Service\Service1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SadSmily.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FullHappy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SubManu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HallfHappy.jpg" />
+    <Resource Include="Images\Happy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\STOPED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <StartArguments />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DENSO_ORM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B14D9C8CB8DA94281BC477513B641C8ADDC02422</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

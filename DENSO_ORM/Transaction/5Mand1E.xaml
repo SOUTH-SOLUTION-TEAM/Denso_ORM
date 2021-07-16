@@ -1,0 +1,127 @@
+﻿<Page x:Class="DENSO_ORM.Transaction._5Mand1E"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Transaction"
+      Title="_5Mand1E" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <Border BorderThickness="4" BorderBrush="Black" Width="900" Height="263" >
+            <Grid Background="LightCyan">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                    <TextBlock Text="5M AND 1E CHANGES VISUALIZATION" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="28"  Foreground="Navy" FontWeight="ExtraBold" ></TextBlock>
+                    <!--<Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,30,0,0" Height="55" Width="250"  Source="/Dash_Board;component/Images/HorizantalLine.jpg"/>-->
+                </Grid>
+                <Grid Margin="2,50,0,7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="148"></ColumnDefinition>
+                        <ColumnDefinition Width="148"></ColumnDefinition>
+                        <ColumnDefinition Width="148"></ColumnDefinition>
+                        <ColumnDefinition Width="148"></ColumnDefinition>
+                        <ColumnDefinition Width="148"></ColumnDefinition>
+                        <ColumnDefinition Width="148"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="198"></RowDefinition>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Name="brdMan" Width="145" BorderBrush="Black" Background="White" Grid.Column="0" BorderThickness="3" CornerRadius="25" Grid.Row="0"  >
+                        <Grid>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,37,0,139" X1="140"  ></Line>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,160,0,30" X1="140"  ></Line>
+                            <TextBlock Name="txtManchange1" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="10,3,0,0"   Text="CHANGE" TextAlignment="Left" VerticalAlignment="TOP" Foreground="Green" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <Image Name="imgManSmily1" Stretch="Fill" VerticalAlignment="Top" Margin="0,4,5,0"  Height="30" Width="30" HorizontalAlignment="Right"  Source="/DENSO_ORM;component/Images/Happy.png"   />
+                            <TextBlock Name="txtManchange" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,0,0,8"   Text="MAN" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <TextBlock Name="txtManStation"  FontWeight="ExtraBold" Margin="2,42,0,0"  Text="Change Station No:-" TextAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="calibri"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,75,0,0" Name="txtManProcess" Text="Process:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,120,0,0" Name="txtManShift" Text="Date and Shift:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                        </Grid>
+                    </Border>
+                    <Border Name="brdMachchange" Width="145" BorderBrush="Black" Background="White" Grid.Column="1" BorderThickness="3" CornerRadius="25" Grid.Row="0"   >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="57*"/>
+                            </Grid.RowDefinitions>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,16.074,0,139" X1="140" Grid.Row="1"  ></Line>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,139.074,0,30" X1="140" Grid.Row="1"  ></Line>
+                            <TextBlock Name="txtMachchange1"  TextWrapping="Wrap" FontWeight="ExtraBold" Margin="10,3,0,0"   Text="NO CHANGE" TextAlignment="Left" VerticalAlignment="TOP" Foreground="Green" FontSize="18" FontFamily="calibri" Grid.RowSpan="2"></TextBlock>
+                            <Image Name="imgMachSmily1" Stretch="Fill" VerticalAlignment="Top" Margin="0,4,5,0"  Height="30" Width="30" HorizontalAlignment="Right"  Source="/DENSO_ORM;component/Images/Happy.png" Grid.RowSpan="2"   />
+
+                            <TextBlock Name="txtMachchange"  TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,0,0,8"   Text="MACHINE" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue" FontSize="18" FontFamily="calibri" Grid.Row="1"></TextBlock>
+                            <TextBlock Name="txtMachStation"  FontWeight="ExtraBold" Margin="2,21.074,0,0"  Text="Change Station No:-" TextAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.Row="1"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,54.074,0,0" Name="txtMachProcess" Text="Process:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.Row="1"/>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,99.074,0,0" Name="txtMachShift" Text="Date and Shift" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.Row="1"/>
+
+                            <!--<TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,5,0,0"  Name="txtNorModelcol3" Text="PLEASE SCAN KANBAN" TextAlignment="Center" VerticalAlignment="Top" Foreground="Black" FontSize="21" FontFamily="calibri"></TextBlock>
+                        <TextBlock FontWeight="ExtraBold" Margin="0,80,0,0"  Name="txtNorQtycol3" Text="" TextAlignment="Center" VerticalAlignment="Top" Foreground="Black" FontSize="21" FontFamily="calibri"></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,58,0,0" Name="txtNorkCountcol3" Text="" TextAlignment="Center" VerticalAlignment="top" Foreground="Black" FontSize="21" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>-->
+                        </Grid>
+                    </Border>
+                    <Border Name="brdMethchange" Width="145" BorderBrush="Black" Grid.Column="2" Background="White" BorderThickness="3" CornerRadius="25" Grid.Row="0"   >
+                        <Grid>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,37,0,139" X1="140"  ></Line>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,160,0,30" X1="140"  ></Line>
+                            <TextBlock Name="txtMethchange1" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="10,3,0,0"   Text="NO CHANGE" TextAlignment="Left" VerticalAlignment="TOP" Foreground="Green" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <Image Name="imgMethSmily1" Stretch="Fill" VerticalAlignment="Top" Margin="0,4,5,0"  Height="30" Width="30" HorizontalAlignment="Right"  Source="/DENSO_ORM;component/Images/Happy.png"   />
+                            <TextBlock Name="txtMethchange" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,0,0,8"   Text="METHOD" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue" FontSize="18" FontFamily="calibri"></TextBlock>
+
+                            <TextBlock Name="txtMethStation"  FontWeight="ExtraBold" Margin="2,42,0,0"  Text="Change Station No:-" TextAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="calibri"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,75,0,0" Name="txtMethProcess" Text="Process:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,120,0,0" Name="txtMethShift" Text="Date and Shift" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                        </Grid>
+                    </Border>
+                    <Border Name="brdMatchange" Width="145" BorderBrush="Black" Grid.Column="3" Background="White" BorderThickness="3" CornerRadius="25" Grid.Row="0"   >
+                        <Grid>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,37,0,139" X1="140"  ></Line>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,160,0,30" X1="140"  ></Line>
+                            <TextBlock Name="txtMatchange1" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="10,3,0,0"   Text="NO CHANGE" TextAlignment="Left" VerticalAlignment="TOP" Foreground="Green" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <Image Name="imgMatSmily1" Stretch="Fill" VerticalAlignment="Top" Margin="0,4,5,0"  Height="30" Width="30" HorizontalAlignment="Right"  Source="/DENSO_ORM;component/Images/Happy.png"   />
+                            <TextBlock Name="txtMatchange" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,0,0,8"   Text="MATERIAL" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <TextBlock Name="txtMatStation"  FontWeight="ExtraBold" Margin="2,42,0,0"  Text="Change Station No:-" TextAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="calibri"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,75,0,0" Name="txtMatProcess" Text="Process:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,120,0,0" Name="txtMatShift" Text="Date and Shift" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+
+                        </Grid>
+                    </Border>
+                    <Border Name="brdMeaschange" Width="145" BorderBrush="Black" Grid.Column="4" Background="White" BorderThickness="3" CornerRadius="25" Grid.Row="0"  >
+                        <Grid>
+
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,37,0,139" X1="140"  ></Line>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,160,0,30" X1="140"  ></Line>
+                            <TextBlock Name="txtMeaschange1" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="10,3,0,0"   Text="NO CHANGE" TextAlignment="Left" VerticalAlignment="TOP" Foreground="Green" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <Image Name="imgMeasSmily1" Stretch="Fill" VerticalAlignment="Top" Margin="0,4,5,0"  Height="30" Width="30" HorizontalAlignment="Right"  Source="/DENSO_ORM;component/Images/Happy.png"   />
+                            <TextBlock Name="txtMeaschange" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,0,0,8"   Text="MEASUREMENT" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <TextBlock Name="txtMeasStation"  FontWeight="ExtraBold" Margin="2,42,0,0"  Text="Change Station No:-" TextAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="calibri"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,75,0,0" Name="txtMeasProcess" Text="Process:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,120,0,0" Name="txtMeasShift" Text="Date and Shift" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+
+                        </Grid>
+                    </Border>
+                    <Border Name="brdEnvchange" Width="145"  BorderBrush="Black" Grid.Column="5" BorderThickness="3" Background="White" CornerRadius="25" Grid.Row="0"   >
+                        <Grid>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,37,0,139" X1="140"  ></Line>
+                            <Line Stroke="Black" StrokeThickness="5" Margin="0,160,0,30" X1="140"  ></Line>
+                            <TextBlock Name="txtEnvchange1" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="10,3,0,0"   Text="NO CHANGE" TextAlignment="Left" VerticalAlignment="TOP" Foreground="Green" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <Image Name="imgEnvSmily1" Stretch="Fill" VerticalAlignment="Top" Margin="0,4,5,0"  Height="30" Width="30" HorizontalAlignment="Right"  Source="/DENSO_ORM;component/Images/Happy.png"   />
+                            <TextBlock Name="txtEnvchange" TextWrapping="Wrap" FontWeight="ExtraBold" Margin="0,0,0,8"   Text="ENVIORNAMENT" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="Blue" FontSize="18" FontFamily="calibri"></TextBlock>
+                            <TextBlock Name="txtEnvStation"  FontWeight="ExtraBold" Margin="2,42,0,0"  Text="Change Station No:-" TextAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="calibri"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,75,0,0" Name="txtEnvProcess" Text="Process:-" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontWeight="ExtraBold" Margin="2,120,0,0" Name="txtEnvShift" Text="Date and Shift" TextAlignment="Left" VerticalAlignment="top" Foreground="Black" FontSize="15" FontFamily="calibri" Grid.ColumnSpan="2"></TextBlock>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+
+
+            </Grid>
+        </Border>
+        <Grid Margin="0,0,20,10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Name="imgSmily3"  MouseLeftButtonUp="ImgSmily3_MouseLeftButtonUp" Stretch="Fill" VerticalAlignment="Top"  Height="50" Width="50"  Source="/DENSO_ORM;component/Images/Back.jpg"/>
+        </Grid>
+    </Grid>
+</Page>

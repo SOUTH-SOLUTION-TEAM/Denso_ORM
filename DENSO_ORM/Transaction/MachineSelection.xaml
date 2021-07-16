@@ -1,0 +1,57 @@
+﻿<Page x:Class="DENSO_ORM.Transaction.MachineSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Transaction"
+     
+      Title="MachineSelection" Style="{StaticResource PageStyle}" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+    <Grid>
+
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0" Grid.ColumnSpan="2">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <TextBlock Text="MACHINE LINE SELECTION" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="20" Margin="10" Foreground="OrangeRed" FontWeight="ExtraBold" ></TextBlock>
+            <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,30,0,0" Height="55" Width="220"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg"/>
+
+        </Grid>
+        <Border Style="{StaticResource BorderStyle}" HorizontalAlignment="Center"  Margin="0,100,0,0" VerticalAlignment="Top" >
+            <Grid Margin="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"></ColumnDefinition>
+                    <ColumnDefinition Width="350"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35">
+                    </RowDefinition>
+                    <RowDefinition Height="45">
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <ComboBox x:Name="Cmbmachinegrp" Grid.Row="0" Grid.Column="1"  SelectionChanged="Cmbmachinegrp_SelectionChanged"/>
+                <ComboBox x:Name="cmbmachinename" Grid.Column="1"  Grid.Row="1" KeyDown="Cmbmachinename_KeyDown" SelectionChanged="Cmbmachinename_SelectionChanged"/>
+                <Label Grid.Row="1" Content="Line Name:"  />
+                <Label Grid.Row="0" Grid.Column="0"  Content="Line Group:"  />
+            </Grid>
+        </Border>
+        
+        <Border x:Name="brdDeffect" Style="{StaticResource BorderStyle}" VerticalAlignment="Top" Margin="0,270,0,9" HorizontalAlignment="Center" >
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+               
+                <Button ToolTip="Press Alt+N for Next"  Grid.Column="0"  x:Name="btnNext" Click="BtnNext_Click">
+                    <TextBlock><Underline>N</Underline>ext</TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+B for Back" Grid.Column="4"  x:Name="btnExit" Click="btnExit_Click">
+                    <TextBlock><Underline>B</Underline>ACK</TextBlock>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

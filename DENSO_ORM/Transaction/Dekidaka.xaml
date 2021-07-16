@@ -1,0 +1,416 @@
+﻿<Page x:Class="DENSO_ORM.Transaction.Dekidaka"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DENSO_ORM.Transaction"
+        mc:Ignorable="d"
+        Title="Dekidaka"  Loaded="Window_Loaded" Unloaded="Page_Unloaded"  >
+    <Grid>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0" Grid.ColumnSpan="2">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Border Background="SkyBlue" BorderBrush="Black" BorderThickness="4" Width="900" Height="185">
+            <Grid>
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-8,0,0">
+                    <TextBlock Text="DEKIDAKA" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="30"  Foreground="Navy" FontWeight="ExtraBold" ></TextBlock>
+                    <!--<Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,30,0,0" Height="55" Width="150"  Source="/Dash_Board;component/Images/HorizantalLine.jpg"/>-->
+                </Grid>
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="893"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="GFisrtName"  Grid.Row="0"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition Width="15.283"></ColumnDefinition>
+                            <ColumnDefinition Width="76.717"/>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                            <ColumnDefinition Width="AUTO"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border  BorderBrush="Black" BorderThickness="2" Background="White" Width="85" Height="auto" Grid.Column="0" Grid.Row="0"    >
+                            <TextBlock FontFamily="calibri" TextWrapping="Wrap" FontWeight="Bold" FontSize="28" Background="Transparent" TextAlignment="Center" Text="1st SHIFT"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                            </TextBlock>
+                        </Border>
+
+                        <Border  BorderBrush="Black" BorderThickness="2" Background="White" Width="92" Height="auto" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"    >
+                            <Grid Margin="0,30,0,0">
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtPlan" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,86,0,0" TextAlignment="Center" Text="PERS"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtAct" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,21,0,0" TextAlignment="Center" Text="PLAN"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtPer" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,54,0,0" TextAlignment="Center" Text="ACTUAL"/>
+                            </Grid>
+                        </Border>
+                        <Border  Name="brdTimeNameShift1Col1" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="1" Margin="0,0,0,98" Grid.ColumnSpan="2" >
+                            <TextBlock  LineStackingStrategy="BlockLineHeight" LineHeight="42"  Width="86" Margin="0,0,0,0" Background="LightGray"  FontFamily="calibri" Foreground="Black"  Name="txtTimeNameShift1Col1" FontSize="30" FontWeight="Bold" VerticalAlignment="Stretch" TextAlignment="Center" Text="TIME"></TextBlock>
+                        </Border>
+                        <Border Name="brdTimeShift1Col1" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="3" Margin="0,0,0,98">
+                            <TextBlock  TextWrapping="Wrap" LineStackingStrategy="BlockLineHeight" LineHeight="25" Width="82" Margin="0,0,0,0" Background="LightGray" FontFamily="calibri" Foreground="Maroon"  Name="txtTimeShift1Col1" FontSize="27" FontWeight="Bold" VerticalAlignment="Stretch"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0"  Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col1" Width="88" Height="100"  VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="3" Grid.Row="0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col1" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol1" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol1" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift1Col2" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="4" Margin="0,0,0,98">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="3" Name="txtTimeShift1Col2" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border  Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col2" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="4" Grid.Row="0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col2" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol2" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol2" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+
+                        </Border>
+                        <Border Name="brdTimeShift1Col3" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="5" Margin="0,0,0,98">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri"  Foreground="Maroon" Grid.Row="0" Grid.Column="4" Name="txtTimeShift1Col3" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col3" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="5" Grid.Row="0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col3" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol3" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol3" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift1Col4" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="6" Margin="0,0,0,98">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="5" Name="txtTimeShift1Col4" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col4" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="6" Grid.Row="0" >
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col4" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol4" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol4" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                            <!--<TextBlock FontFamily="calibri" Foreground="White" Name="txtShift1Col4" FontSize="35" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5" TextAlignment="Center" Text="0.0%"></TextBlock>-->
+                        </Border>
+
+                        <Border Name="brdTimeShift1Col5" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="7" Margin="0,0,0,98">
+                            <TextBlock Width="82"  Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="6" Name="txtTimeShift1Col5" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col5" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="7" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col5" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol5" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol5" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                            <!--<TextBlock FontFamily="calibri" Foreground="White" Name="txtShift1Col5" FontSize="35" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5" TextAlignment="Center" Text="0.0%"></TextBlock>-->
+                        </Border>
+                        <Border Name="brdTimeShift1Col6" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="8" Margin="0,0,0,98">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="7" Name="txtTimeShift1Col6" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col6" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="8" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col6" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol6" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol6" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                            <!--<TextBlock FontFamily="calibri" Foreground="White" Name="txtShift1Col6" FontSize="35" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5" TextAlignment="Center" Text="0.0%"></TextBlock>-->
+                        </Border>
+                        <Border Name="brdTimeShift1Col7" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="9" Margin="0,0,0,98">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="8" Name="txtTimeShift1Col7" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col7" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="9" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col7" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol7" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol7" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+
+                        </Border>
+                        <Border Name="brdTimeShift1Col8" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="10" Margin="0,0,0,98">
+                            <TextBlock Width="82"  Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="9" Name="txtTimeShift1Col8" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift1col8" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="10" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1Col8" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1PCol8" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift1ACol8" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+                        <Line Stroke="Black" StrokeThickness="3" Margin="0,85,0,30" X1="795" Grid.Column="1" Grid.ColumnSpan="10"/>
+                        <Line Stroke="Black" StrokeThickness="3" Margin="0,118,0,30" X1="795" Grid.Column="1" Grid.ColumnSpan="10" ></Line>
+
+                    </Grid>
+                    <Grid x:Name="GSecondName" Visibility="Hidden" Grid.Row="0"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="Black" BorderThickness="2" Background="White" Width="85" Height="auto" Grid.Column="0" Grid.Row="0"    >
+                            <TextBlock FontFamily="calibri" TextWrapping="Wrap" FontWeight="Bold" FontSize="28" Background="Transparent" TextAlignment="Center" Text="2nd SHIFT"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                            </TextBlock>
+                        </Border>
+
+                        <Border  BorderBrush="Black" BorderThickness="2" Background="White" Width="92" Height="auto" Grid.Column="1" Grid.Row="0"    >
+                            <Grid Margin="0,30,0,0">
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtSecPlan" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,86,0,0" TextAlignment="Center" Text="PERS"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtSecAct" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,21,0,0" TextAlignment="Center" Text="PLAN"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtSecPer" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,54,0,0" TextAlignment="Center" Text="ACTUAL"/>
+                            </Grid>
+                        </Border>
+                        <Border Name="brdTimeNameShift2Col1" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="1" Margin="0,0,0,98" >
+                            <TextBlock Width="86" Margin="0,0,0,0"  LineStackingStrategy="BlockLineHeight" LineHeight="42" Background="LightGray" FontFamily="calibri" Foreground="Black"  Name="txtTimeNameShift2Col1" FontSize="30" FontWeight="Bold" VerticalAlignment="Stretch"  TextAlignment="Center" Text="TIME"></TextBlock>
+                        </Border>
+                        <Border Name="brdTimeShift2Col1" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="2" >
+                            <TextBlock Width="82" Margin="0,0,0,0" Background="LightGray" FontFamily="calibri" Foreground="Maroon"  Name="txtTimeShift2Col1" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0"  Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col1" Width="88" Height="100"  VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="2" Grid.Row="0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col1" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol1" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol1" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift2Col2" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="3">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="3" Name="txtTimeShift2Col2" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border  Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col2" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="3" Grid.Row="0" Grid.RowSpan="2">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col2" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol2" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol2" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift2Col3" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="4">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri"  Foreground="Maroon" Grid.Row="0" Grid.Column="4" Name="txtTimeShift2Col3" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col3" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="4" Grid.Row="0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col3" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol3" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol3" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift2Col4" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="5">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="5" Name="txtTimeShift2Col4" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col4" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="5" Grid.Row="0" >
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col4" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol4" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol4" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                            <!--<TextBlock FontFamily="calibri" Foreground="White" Name="txtShift1Col4" FontSize="35" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5" TextAlignment="Center" Text="0.0%"></TextBlock>-->
+                        </Border>
+
+                        <Border Name="brdTimeShift2Col5" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="6">
+                            <TextBlock Width="82"  Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="6" Name="txtTimeShift2Col5" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col5" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="6" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col5" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol5" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol5" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                            <!--<TextBlock FontFamily="calibri" Foreground="White" Name="txtShift1Col5" FontSize="35" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5" TextAlignment="Center" Text="0.0%"></TextBlock>-->
+                        </Border>
+                        <Border Name="brdTimeShift2Col6" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="7">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="7" Name="txtTimeShift2Col6" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col6" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="7" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col6" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol6" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol6" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                            <!--<TextBlock FontFamily="calibri" Foreground="White" Name="txtShift1Col6" FontSize="35" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,5" TextAlignment="Center" Text="0.0%"></TextBlock>-->
+                        </Border>
+
+                        <Border Name="brdTimeShift2Col7" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="8">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="8" Name="txtTimeShift2Col7" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col7" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="8" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col7" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol7" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol7" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+
+                        </Border>
+                        <Border Name="brdTimeShift2Col8" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="9">
+                            <TextBlock Width="82"  Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="9" Name="txtTimeShift2Col8" FontSize="27"  LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift2col8" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="9" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2Col8" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2PCol8" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift2ACol8" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+                        <Line Stroke="Black" StrokeThickness="3" Margin="0,85,0,30" X1="795" Grid.Column="1" Grid.ColumnSpan="9"/>
+                        <Line Stroke="Black" StrokeThickness="3" Margin="0,118,0,30" X1="795" Grid.Column="1" Grid.ColumnSpan="9" ></Line>
+                    </Grid>
+
+                    <Grid x:Name="GThidName" Visibility="Hidden" Grid.Row="0"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Border BorderBrush="Black" BorderThickness="2" Background="White" Width="85" Height="auto" Grid.Column="0" Grid.Row="0"     >
+                            <TextBlock FontFamily="calibri" TextWrapping="Wrap" FontWeight="Bold" FontSize="28" Background="Transparent" TextAlignment="Center" Text="3rd SHIFT"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                            </TextBlock>
+                        </Border>
+
+
+                        <Border  BorderBrush="Black" BorderThickness="2" Background="White" Width="92" Height="auto" Grid.Column="1" Grid.Row="0"    >
+                            <Grid Margin="0,30,0,0">
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtThrPlan" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,86,0,0" TextAlignment="Center" Text="PERS"/>
+
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtThrAct" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,21,0,0" TextAlignment="Center" Text="PLAN"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtThrPer" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" Margin="0,54,0,0" TextAlignment="Center" Text="ACTUAL"/>
+
+                            </Grid>
+                        </Border>
+                        <Border Name="brdTimeNameShift3Col1" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="1" Margin="0,0,0,98" >
+                            <TextBlock LineStackingStrategy="BlockLineHeight" LineHeight="42" Width="86" Margin="0,0,0,0" Background="LightGray" FontFamily="calibri" Foreground="Black"  Name="txtTimeNameShift3Col1" FontSize="30" FontWeight="Bold" VerticalAlignment="Stretch"  TextAlignment="Center" Text="TIME"></TextBlock>
+                        </Border>
+                        <Border Name="brdTimeShift3Col1" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="2" >
+                            <TextBlock Width="82" Margin="0,0,0,0" Background="LightGray" FontFamily="calibri" Foreground="Maroon"  Name="txtTimeShift3Col1" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0"  Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col1" Width="88" Height="100"  VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="2" Grid.Row="0">
+                            <Grid>
+                                <!--<Line Stroke="Black" StrokeThickness="4" Margin="0,36,0,60" X1="90" ></Line>
+                            <Line Stroke="Black" StrokeThickness="4" Margin="0,72,0,30" X1="90" ></Line>-->
+
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col1" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol1" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol1" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+                        <Border Name="brdTimeShift3Col2" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="3">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="3" Name="txtTimeShift3Col2" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border  Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col2" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="3" Grid.Row="0" Grid.RowSpan="2">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col2" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol2" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol2" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift3Col3" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="4">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri"  Foreground="Maroon" Grid.Row="0" Grid.Column="4" Name="txtTimeShift3Col3" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col3" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="4" Grid.Row="0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col3" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol3" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol3" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+                        <Border Name="brdTimeShift3Col4" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="5">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="5" Name="txtTimeShift3Col4" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Margin="0,50,0,0" Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col4" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="5" Grid.Row="0" >
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col4" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol4" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol4" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+                        <Border Name="brdTimeShift3Col5" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="6">
+                            <TextBlock Width="82"  Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="6" Name="txtTimeShift3Col5" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col5" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="6" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col5" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol5" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol5" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+                        <Border Name="brdTimeShift3Col6" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="7">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="7" Name="txtTimeShift3Col6" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col6" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="7" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col6" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol6" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol6" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+                        </Border>
+
+                        <Border Name="brdTimeShift3Col7" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="8">
+                            <TextBlock Width="82" Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="8" Name="txtTimeShift3Col7" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col7" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="8" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col7" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol7" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol7" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+                            </Grid>
+
+                        </Border>
+
+                        <Border Name="brdTimeShift3Col8" BorderBrush="Black" BorderThickness="2" Grid.Row="0" Grid.Column="9">
+                            <TextBlock Width="82"  Background="LightGray" FontFamily="calibri" Foreground="Maroon" Grid.Row="0" Grid.Column="9" Name="txtTimeShift3Col8" FontSize="27" LineStackingStrategy="BlockLineHeight" LineHeight="25" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"  TextAlignment="Center" Text="00:00 00:00"></TextBlock>
+                        </Border>
+                        <Border Background="White" BorderBrush="Black" BorderThickness="2" x:Name="brdShift3col8" Width="88" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="9" Grid.Row="0" Margin="0,50,0,0">
+                            <Grid>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3Col8" FontSize="28" FontWeight="Bold" VerticalAlignment="Top" Margin="0,64,0,0" TextAlignment="Center" Text="0.0%"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3PCol8" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Margin="0,-2,0,0" TextAlignment="Center" Text="0000"/>
+                                <TextBlock FontFamily="calibri" Foreground="Black"  x:Name="txtShift3ACol8" FontSize="30" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,29" TextAlignment="Center" Text="0000"/>
+
+                            </Grid>
+
+                        </Border>
+                        <Line Stroke="Black" StrokeThickness="3" Margin="0,85,0,30" X1="795" Grid.Column="1" Grid.ColumnSpan="9"/>
+                        <Line Stroke="Black" StrokeThickness="3" Margin="0,118,0,30" X1="795" Grid.Column="1" Grid.ColumnSpan="9" ></Line>
+
+                    </Grid>
+
+                </Grid>
+            </Grid>
+        </Border>
+        <Grid Margin="0,0,20,10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Name="imgSmily3"  MouseLeftButtonUp="ImgSmily3_MouseLeftButtonUp" Stretch="Fill" VerticalAlignment="Top"  Height="50" Width="50"  Source="/DENSO_ORM;component/Images/Back.jpg"/>
+        </Grid>
+    </Grid>
+</Page>

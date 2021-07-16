@@ -1,0 +1,120 @@
+﻿<Page x:Class="DENSO_ORM.Masters.ColorMaster"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Masters"
+      Title="ColorMaster" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Style="{StaticResource PageStyle}" Unloaded="Page_Unloaded">
+    <Grid>
+
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0" Grid.ColumnSpan="2">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="COLOR CONFIGURATION" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="20" Margin="10" Foreground="OrangeRed" FontWeight="ExtraBold" ></TextBlock>
+            <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,30,0,0" Height="55" Width="250"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg"/>
+
+        </Grid>
+
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100,0,0"   >
+            <Grid Margin="5,5,5,8" Name="grid1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ComboBox Grid.Column="1" Name="cmbprocess"></ComboBox>
+                <ComboBox Grid.Column="1" Name="cmbcolor" Width="160" HorizontalAlignment="Left" Grid.Row="1"  SelectionChanged="Cmbcolor_SelectionChanged">
+                    
+                </ComboBox>
+                <Label Grid.Column="1"  Name="lblcolor"  HorizontalContentAlignment="Center" Margin="170,0,0,0" Grid.Row="1"  />
+
+                <ComboBox Grid.Column="1" Name="cmbpercent"  Grid.Row="2" >
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="25"/>
+                    <ComboBoxItem Content="30"/>
+                    <ComboBoxItem Content="35"/>
+                    <ComboBoxItem Content="40"/>
+                    <ComboBoxItem Content="45"/>
+                    <ComboBoxItem Content="50"/>
+                    <ComboBoxItem Content="55"/>
+                    <ComboBoxItem Content="60"/>
+                    <ComboBoxItem Content="65"/>
+                    <ComboBoxItem Content="70"/>
+                    <ComboBoxItem Content="75"/>
+                    <ComboBoxItem Content="80"/>
+                    <ComboBoxItem Content="85"/>
+                    <ComboBoxItem Content="90"/>
+                    <ComboBoxItem Content="95"/>
+                    <ComboBoxItem Content="100"/>
+                </ComboBox>
+                <CheckBox IsChecked="True" Name="chkStatus" Grid.Row="3" Grid.Column="1" ></CheckBox>
+
+
+                <Label Grid.Row="0" Grid.Column="0"  Content="Process Type:" />
+                <Label Grid.Row="1" Grid.Column="0"  Content="Color Name:"  />
+                 <Label Grid.Row="2" Grid.Column="0"  Content="Percentage:" />
+                <Label Grid.Row="3" Grid.Column="0" Content="Status:"   />
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,275,0,0"  >
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="115"/>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="Press Alt+S for Save"  x:Name="btnSave" Click="btnSave_Click" TabIndex="6">
+                    <TextBlock x:Name="btnSaveText"><Underline><Run Text="S"/></Underline><Run Text="AVE"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+U for Update" Grid.Column="1"  x:Name="btnUpdate" Click="btnUpdate_Click"
+                    TabIndex="7" Margin="5,0,0,0">
+                    <TextBlock><Underline><Run Text="U"/></Underline><Run Text="PDATE"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+D for Delete" Grid.Column="2"  x:Name="btnDelete" Click="btnDelete_Click"
+                    TabIndex="14">
+                    <TextBlock><Underline><Run Text="D"/></Underline><Run Text="ELETE"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+C for Clear"  Grid.Column="3"  x:Name="btnClear" Click="btnClear_Click"
+                    TabIndex="8">
+                    <TextBlock><Underline><Run Text="C"/></Underline><Run Text="LEAR"/></TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+B for Back" Grid.Column="4"  x:Name="btnExit" Click="btnExit_Click"
+                    TabIndex="9">
+                    <TextBlock><Underline><Run Text="B"/></Underline><Run Text="ACK"/></TextBlock>
+                </Button>
+            </Grid>
+        </Border>
+        <Border  Style="{StaticResource BorderStyle}" Margin="0,335,0,9" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="443">
+            <Grid Margin="7">
+                <DataGrid ToolTip="Single selection is for edit all columns and multiple selection is for delete data" x:Name="dvgMasterDeatils" SelectionChanged="dvgMasterDeatils_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="auto" Header="  SLNO  " ElementStyle="{StaticResource WrapText}"  Binding="{Binding SLNO}" />
+                        <DataGridTextColumn Width="auto" Header="  refno  " Visibility="Hidden"  ElementStyle="{StaticResource WrapText}"  Binding="{Binding Refno}" />
+                        <DataGridTextColumn Width="auto" Header="  PROCESS TYPE " ElementStyle="{StaticResource WrapText}" Binding="{Binding ProcessType}" />
+                        <DataGridTextColumn Width="auto" Header="  COLOUR NAME " ElementStyle="{StaticResource WrapText}" Binding="{Binding ColorName}" />
+                        <DataGridTextColumn Width="auto" Header="  PERCENTAGE " ElementStyle="{StaticResource WrapText}" Binding="{Binding Percentage}" />
+
+                        <DataGridTextColumn Width="auto" Header=" STATUS" ElementStyle="{StaticResource WrapText}" Binding="{Binding Status}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+        
+
+
+    </Grid>
+</Page>
