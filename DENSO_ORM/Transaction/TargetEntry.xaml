@@ -1,0 +1,110 @@
+﻿<Page x:Class="DENSO_ORM.Transaction.TargetEntry"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DENSO_ORM.Transaction"
+      mc:Ignorable="d" 
+       Loaded="Window_Loaded" KeyDown="Window_KeyDown" Style="{StaticResource PageStyle}" Title="TargetEntry"  Unloaded="Page_Unloaded" >
+    <Grid>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0" Grid.ColumnSpan="2">
+            <TextBlock FontWeight="Bold" FontSize="15" Width="190" x:Name="txtDatetime" Text="Date Time"  Foreground="Black"></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <TextBlock Text="TARGET ENTRY" HorizontalAlignment="Center" FontFamily="Calibri" FontSize="20" Margin="10" Foreground="OrangeRed" FontWeight="ExtraBold" ></TextBlock>
+            <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,27,0,0" Height="55" Width="230"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg"/>
+        </Grid>
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,94,0,0">
+            <Grid Margin="5" Name="grid1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition Width="290"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="290"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Month:" Height="Auto" />
+                <Label Grid.Row="0" Content="Target Type:" Height="Auto" Grid.Column="2" />
+                <Label Grid.Row="1" Content="Category:" Grid.Column="0" Height="Auto" />
+                <Label Grid.Row="1" Grid.Column="2" Content="Target:" Height="Auto" />
+                <ComboBox x:Name="cmbMonth" Grid.Column="1">
+                    <ComboBoxItem>January</ComboBoxItem>
+                    <ComboBoxItem>February</ComboBoxItem>
+                    <ComboBoxItem>March</ComboBoxItem>
+                    <ComboBoxItem>April</ComboBoxItem>
+                    <ComboBoxItem>May</ComboBoxItem>
+                    <ComboBoxItem>June</ComboBoxItem>
+                    <ComboBoxItem>July</ComboBoxItem>
+                    <ComboBoxItem>August</ComboBoxItem>
+                    <ComboBoxItem>September</ComboBoxItem>
+                    <ComboBoxItem>october</ComboBoxItem>
+                    <ComboBoxItem>November</ComboBoxItem>
+                    <ComboBoxItem>December</ComboBoxItem>
+                </ComboBox>
+                <ComboBox  x:Name="cmbTargettype" Grid.Column="3" SelectionChanged="CmbTargettype_SelectionChanged">
+                    <ComboBoxItem Content="Line"/>
+                    <ComboBoxItem Content="Loss"/>
+                </ComboBox>
+                <ComboBox x:Name="cmbCategory"  Grid.Column="1" Grid.Row="1" >
+                </ComboBox>
+                <TextBox  Grid.Column="3" x:Name="txttarget" Grid.Row="1"  />
+
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,196,0,0"  >
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button ToolTip="Press Alt+S for Save"  x:Name="btnSave" Click="btnSave_Click" TabIndex="6">
+                    <TextBlock Name="btnSaveText"><Underline>S</Underline>AVE</TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+U for Update" Grid.Column="1"  x:Name="btnUpdate" Click="btnUpdate_Click"
+                        TabIndex="7" Margin="5,0,0,0">
+                    <TextBlock><Underline>U</Underline>PDATE</TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+D for Delete" Grid.Column="2"  x:Name="btnDelete" Click="btnDelete_Click"
+                        TabIndex="14">
+                    <TextBlock><Underline>D</Underline>ELETE</TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+C for Clear"  Grid.Column="3"  x:Name="btnClear" Click="btnClear_Click"
+                        TabIndex="8">
+                    <TextBlock><Underline>C</Underline>LEAR</TextBlock>
+                </Button>
+                <Button ToolTip="Press Alt+B for Back" Grid.Column="4"  x:Name="btnExit" Click="btnExit_Click"
+                        TabIndex="9">
+                    <TextBlock><Underline>B</Underline>ACK</TextBlock>
+                </Button>
+            </Grid>
+        </Border>
+        <Border  Style="{StaticResource BorderStyle}" Margin="0,260,0,10" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <Grid Margin="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <DataGrid ToolTip="Single selection is for edit all columns and multiple selection is for delete data" x:Name="dvgMasterDeatils" SelectionChanged="dvgMasterDeatils_SelectionChanged" HorizontalAlignment="Left" Width="397" Grid.ColumnSpan="2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="auto" Header="  SLNO  " ElementStyle="{StaticResource WrapText}"  Binding="{Binding Slno}" />
+                        <DataGridTextColumn Width="auto" Header="  MONTH " ElementStyle="{StaticResource WrapText}" Binding="{Binding Month}" />
+                        <DataGridTextColumn Width="auto" Header="  YEAR " ElementStyle="{StaticResource WrapText}" Binding="{Binding Year}" />
+                        <DataGridTextColumn Width="auto" Header="  TARGET TYPE " ElementStyle="{StaticResource WrapText}" Binding="{Binding TargetType}" />
+                        <DataGridTextColumn Width="auto" Header="  CATEGORY " ElementStyle="{StaticResource WrapText}" Binding="{Binding Category}" />
+                        <DataGridTextColumn Width="auto" Header="  TARGET " ElementStyle="{StaticResource WrapText}" Binding="{Binding Target}" />
+                        <DataGridTextColumn Width="auto" Visibility="Hidden" Header="  Refno " ElementStyle="{StaticResource WrapText}" Binding="{Binding Refno}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

@@ -429,5 +429,56 @@ namespace BUSINESS_LAYER.Transaction
             }
         }
         #endregion
+
+
+        #region TargetEntry
+        public string BL_TargetEntryTransaction()
+        {
+            try
+            {
+                return obj_DB.ExecuteProcedureParam("Proc_TargetEntry", ENTITY_LAYER.Transaction.Transaction.RefNo, ENTITY_LAYER.Transaction.Transaction.Month, ENTITY_LAYER.Transaction.Transaction.Year, ENTITY_LAYER.Transaction.Transaction.TargetType, ENTITY_LAYER.Transaction.Transaction.Category, ENTITY_LAYER.Transaction.Transaction.Target, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet BL_TargetEntryDetails()
+        {
+            try
+            {
+                return obj_DB.ExecuteDataSetParam("Proc_TargetEntry", ENTITY_LAYER.Transaction.Transaction.RefNo, ENTITY_LAYER.Transaction.Transaction.Month, ENTITY_LAYER.Transaction.Transaction.Year, ENTITY_LAYER.Transaction.Transaction.TargetType, ENTITY_LAYER.Transaction.Transaction.Category, ENTITY_LAYER.Transaction.Transaction.Target, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ManualOREntry
+        public string BL_ManualOrEntryTransaction()
+        {
+            try
+            {
+                return obj_DB.ExecuteProcedureParam("Proc_ManualOrEntry", ENTITY_LAYER.Transaction.Transaction.RefNo, ENTITY_LAYER.Masters.Masters.MachineGroup, ENTITY_LAYER.Masters.Masters.MachineName, ENTITY_LAYER.Masters.Masters.ModelName, ENTITY_LAYER.Transaction.Transaction.Date, ENTITY_LAYER.Transaction.Transaction.Shiftname, ENTITY_LAYER.Transaction.Transaction.Qty, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet BL_ManualOrEntryDetails()
+        {
+            try
+            {
+                return obj_DB.ExecuteDataSetParam("Proc_ManualOrEntry", ENTITY_LAYER.Transaction.Transaction.RefNo, ENTITY_LAYER.Masters.Masters.MachineGroup, ENTITY_LAYER.Masters.Masters.MachineName, ENTITY_LAYER.Masters.Masters.ModelName, ENTITY_LAYER.Transaction.Transaction.Date, ENTITY_LAYER.Transaction.Transaction.Shiftname, ENTITY_LAYER.Transaction.Transaction.Qty, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }

@@ -69,6 +69,12 @@ namespace DENSO_ORM.Masters
                 cmbSection.Focus();
                 return false;
             }
+            if (cmbOrlinetype.SelectedIndex == -1)
+            {
+                CommonClasses.CommonMethods.MessageBoxShow("PLEASE SELECT OR LINE TYPE", CommonClasses.CommonVariable.CustomStriing.Information.ToString());
+                cmbOrlinetype.Focus();
+                return false;
+            }
             return true;
         }
 
@@ -88,6 +94,7 @@ namespace DENSO_ORM.Masters
                 ENTITY_LAYER.Masters.Masters.MachineGrID = RefNo;
                 ENTITY_LAYER.Masters.Masters.Type = Type;
                 ENTITY_LAYER.Masters.Masters.Section = cmbSection.Text;
+                ENTITY_LAYER.Masters.Masters.MachineType = cmbOrlinetype.Text;
                 CommonClasses.CommonVariable.Result = obj_Mast.BL_MachineGroupTransaction();
                 if (CommonClasses.CommonVariable.Result == "Saved")
                 {
@@ -272,7 +279,8 @@ namespace DENSO_ORM.Masters
                     txtmcname.Text = dr["MachineName"].ToString();
                     cmboperation.Text = dr["Operation"].ToString();
                     txtBaseGhRatio.Text = dr["BaseGHRatio"].ToString();
-                    cmbSection.Text = dr["Section"].ToString();
+                    cmbSection.Text = dr["section"].ToString();
+                    cmbOrlinetype.Text = dr["ORLineType"].ToString();
                     if (CommonClasses.CommonVariable.Active == dr["Status"].ToString())
                         chkStatus.IsChecked = true;
                     else
@@ -287,6 +295,7 @@ namespace DENSO_ORM.Masters
                     cmboperation.Text = "";
                     txtBaseGhRatio.Text = "";
                     cmbSection.Text = "";
+                    cmbOrlinetype.Text = "";
                     RefNo = 0;
                     chkStatus.IsChecked = true;
                     cmbmachinegrp.Focus();

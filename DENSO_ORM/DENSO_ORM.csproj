@@ -294,6 +294,9 @@
     <Compile Include="Transaction\ManPowerEntry.xaml.cs">
       <DependentUpon>ManPowerEntry.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\ManualEntryOR.xaml.cs">
+      <DependentUpon>ManualEntryOR.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\ORMonitoringSystem.xaml.cs">
       <DependentUpon>ORMonitoringSystem.xaml</DependentUpon>
     </Compile>
@@ -305,6 +308,9 @@
     </Compile>
     <Compile Include="Transaction\StockVisualisation.xaml.cs">
       <DependentUpon>StockVisualisation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\TargetEntry.xaml.cs">
+      <DependentUpon>TargetEntry.xaml</DependentUpon>
     </Compile>
     <Compile Include="Web References\DENSO_ORM_Service\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -473,6 +479,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Transaction\ManualEntryOR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Transaction\ORMonitoringSystem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -486,6 +496,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Transaction\StockVisualisation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transaction\TargetEntry.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

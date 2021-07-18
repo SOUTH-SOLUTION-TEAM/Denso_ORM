@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DENSO_ORM.Masters"
         mc:Ignorable="d"
-        Title="MachineGroup" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Style="{StaticResource PageStyle}" Unloaded="Page_Unloaded" Height="700">
+        Title="MachineGroup" Loaded="Window_Loaded" KeyDown="Window_KeyDown" Style="{StaticResource PageStyle}" Unloaded="Page_Unloaded">
     <Grid>
 
         <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="199" Margin="35,0,0,0" Grid.ColumnSpan="2">
@@ -16,7 +16,7 @@
             <Image Name="image3" Stretch="Fill" VerticalAlignment="Top" Margin="0,30,0,0" Height="55" Width="230"  Source="/DENSO_ORM;component/Images/HorizantalLine.jpg"/>
 
         </Grid>
-        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100,0,0" Height="128"   >
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100,0,0">
             <Grid Margin="5" Name="grid1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="120"></ColumnDefinition>
@@ -28,28 +28,35 @@
                     <RowDefinition Height="35"></RowDefinition>
                     <RowDefinition Height="35"></RowDefinition>
                     <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
                 </Grid.RowDefinitions>
                 <ComboBox Grid.Column="1" Name="cmbmachinegrp" ></ComboBox>
                 <TextBox Grid.Column="4" Name="txtmcname" />
 
-                <CheckBox IsChecked="True" Name="chkStatus" Grid.Row="2" Grid.Column="3" ></CheckBox>
                 <TextBox x:Name="cmboperation"  Grid.Column="1" Grid.Row="1"/>
                 <TextBox x:Name="txtBaseGhRatio"  Grid.Column="3" Grid.Row="1" />
-                <ComboBox Grid.Column="1" Grid.Row="2" Name="cmbSection" >
+                <ComboBox Grid.Column="1" Grid.Row="2" Name="cmbSection" Margin="0" >
                     <ComboBoxItem>Section 1</ComboBoxItem>
                     <ComboBoxItem>Section 2</ComboBoxItem>
                 </ComboBox>
+                <ComboBox Grid.Column="3" Grid.Row="2" x:Name="cmbOrlinetype">
+                    <ComboBoxItem Content="AUTO"/>
+                    <ComboBoxItem Content="MANUAL"/>
+                </ComboBox>
+                <CheckBox IsChecked="True" Name="chkStatus" Grid.Row="3" Grid.Column="1" ></CheckBox>
 
                 <Label Grid.Row="0" Grid.Column="0" Content="Line Group:"  />
                 <Label Grid.Row="0" Grid.Column="2" Content="Line Name:" />
-                <Label Grid.Row="2" Grid.Column="2" Content="Status:"  />
+                <Label Grid.Row="3" Grid.Column="0" Content="Status:"  />
                 <Label Grid.Row="1" Grid.Column="0" Content="Operation:" />
                 <Label Grid.Column="2"  Content="Base GH Ratio:"  Grid.Row="1" />
                 <Label Grid.Row="2" Grid.Column="0"  Content="Section:" />
+                <Label Grid.Row="2" Grid.Column="2"  Content="OR LINE TYPE:"  />
+                
             </Grid>
         </Border>
 
-        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,235,0,0">
+        <Border Style="{StaticResource BorderStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,265,0,0">
             <Grid Margin="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"></RowDefinition>
@@ -83,7 +90,7 @@
             </Grid>
         </Border>
 
-        <Border  Style="{StaticResource BorderStyle}" Margin="0,296,0,10" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+        <Border  Style="{StaticResource BorderStyle}" Margin="0,328,0,9" VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <Grid Margin="7">
                 <DataGrid ToolTip="Single selection is for edit all columns and multiple selection is for delete data" x:Name="dvgMasterDeatils" SelectionChanged="dvgMasterDeatils_SelectionChanged">
                     <DataGrid.Columns>
@@ -94,6 +101,7 @@
                         <DataGridTextColumn Width="auto" Header="  OPERATION " ElementStyle="{StaticResource WrapText}" Binding="{Binding Operation}" />
                         <DataGridTextColumn Width="auto" Header="  BASE GH RATIO " ElementStyle="{StaticResource WrapText}" Binding="{Binding BaseGhRatio}" />
                         <DataGridTextColumn Width="auto" Header="  SECTION " ElementStyle="{StaticResource WrapText}" Binding="{Binding Section}" />
+                        <DataGridTextColumn Width="auto" Header="  OR LINE TYPE " ElementStyle="{StaticResource WrapText}" Binding="{Binding ORLineType}" />
                         <DataGridTextColumn Width="auto" Header="  STATUS" ElementStyle="{StaticResource WrapText}" Binding="{Binding Status}" />
                         
                     </DataGrid.Columns>

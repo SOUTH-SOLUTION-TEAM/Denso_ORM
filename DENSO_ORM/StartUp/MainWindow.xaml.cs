@@ -881,6 +881,54 @@ namespace DENSO_ORM.StartUp
                                     obj.ToolTip = "Access Denied";
                                 }
                             }
+                            if (i == 0 && J == 3)
+                            {
+                                Grid g = new Grid();
+                                Button obj = new Button();
+                                obj.Content = "TARGET ENTRY";
+                                //  obj.Height = 80;
+                                // obj.Width = 190;
+                                obj.Style = (Style)FindResource("SubMenuButton");
+                                Grid.SetColumn(obj, i);
+                                Grid.SetRow(obj, J);
+                                GridSubMenu.Children.Add(obj);
+                                ControlsCount = ControlsCount + 1;
+
+                                if (CommonClasses.CommonVariable.Rights.Contains("TARGET ENTRY"))
+                                {
+                                    obj.Click += TargetEntry_Click;
+                                }
+                                //  
+                                else
+                                {
+                                    obj.Click -= TargetEntry_Click;
+                                    obj.ToolTip = "Access Denied";
+                                }
+                            }
+                            if (i == 1 && J == 3)
+                            {
+                                Grid g = new Grid();
+                                Button obj = new Button();
+                                obj.Content = "MANUAL OR ENTRY";
+                                //  obj.Height = 80;
+                                // obj.Width = 190;
+                                obj.Style = (Style)FindResource("SubMenuButton");
+                                Grid.SetColumn(obj, i);
+                                Grid.SetRow(obj, J);
+                                GridSubMenu.Children.Add(obj);
+                                ControlsCount = ControlsCount + 1;
+
+                                if (CommonClasses.CommonVariable.Rights.Contains("MANUAL OR ENTRY"))
+                                {
+                                    obj.Click += ManualOREntry_Click;
+                                }
+                                //  
+                                else
+                                {
+                                    obj.Click -= ManualOREntry_Click;
+                                    obj.ToolTip = "Access Denied";
+                                }
+                            }
                         }
 
                     }
@@ -917,6 +965,31 @@ namespace DENSO_ORM.StartUp
                 CommonClasses.CommonMethods.MessageBoxShow(ex.Message.ToString(), CommonClasses.CommonVariable.CustomStriing.Error.ToString());
             }
         }
+        private void TargetEntry_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                NavigationService.Navigate(new Transaction.TargetEntry());
+            }
+            catch (Exception ex)
+            {
+                obj_Log.CreateLog(ex.Message.ToString(), MethodBase.GetCurrentMethod().ToString(), "MAIN_WINDOW", CommonClasses.CommonVariable.UserID);
+                CommonClasses.CommonMethods.MessageBoxShow(ex.Message.ToString(), CommonClasses.CommonVariable.CustomStriing.Error.ToString());
+            }
+        }
+        private void ManualOREntry_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                NavigationService.Navigate(new Transaction.ManualEntryOR());
+            }
+            catch (Exception ex)
+            {
+                obj_Log.CreateLog(ex.Message.ToString(), MethodBase.GetCurrentMethod().ToString(), "MAIN_WINDOW", CommonClasses.CommonVariable.UserID);
+                CommonClasses.CommonMethods.MessageBoxShow(ex.Message.ToString(), CommonClasses.CommonVariable.CustomStriing.Error.ToString());
+            }
+        }
+
         private void _5M1EChangesView_Click(object sender, RoutedEventArgs e)
         {
             try

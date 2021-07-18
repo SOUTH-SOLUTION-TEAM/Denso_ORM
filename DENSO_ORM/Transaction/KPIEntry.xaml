@@ -226,28 +226,28 @@
                                     <RowDefinition Height="30"/>
                                 </Grid.RowDefinitions>
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Text="TOTAL MANPOWER GIVEN BY COMPANY:" TextWrapping="Wrap" />
-                                <TextBox Text="0" Foreground="White" TextChanged="TxtTOTAL_MANPOWER_GIVEN_BY_COMPANY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  x:Name="txtTOTAL_MANPOWER_GIVEN_BY_COMPANY" Height="24"   />
+                                <TextBox Foreground="White" TextChanged="TxtTOTAL_MANPOWER_GIVEN_BY_COMPANY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  x:Name="txtTOTAL_MANPOWER_GIVEN_BY_COMPANY" Height="24"   />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0"  Text="ABSENT:" TextWrapping="Wrap" />
-                                <TextBox Text="0" Foreground="White" TextChanged="TxtABSENT_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1"    x:Name="txtABSENT" Height="24" />
+                                <TextBox Foreground="White" TextChanged="TxtABSENT_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1"    x:Name="txtABSENT" Height="24" />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0" Text="INLINE OPERATOR:" TextWrapping="Wrap" />
-                                <TextBox Text="0" Foreground="White" TextChanged="TxtINLINE_OPERATOR_TextChanged"   Background="Green"  Width="80" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" x:Name="txtINLINE_OPERATOR" Height="24"/>
+                                <TextBox Foreground="White" TextChanged="TxtINLINE_OPERATOR_TextChanged"   Background="Green"  Width="80" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" x:Name="txtINLINE_OPERATOR" Height="24"/>
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="0"  Text="OFFLINE (LINE PARTS FEEDER):" TextWrapping="Wrap"   />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtOFFLINE_LINE_PARTS_FEEDER_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1"  x:Name="txtOFFLINE_LINE_PARTS_FEEDER" Height="24" />
+                                <TextBox Foreground="White"  TextChanged="TxtOFFLINE_LINE_PARTS_FEEDER_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1"  x:Name="txtOFFLINE_LINE_PARTS_FEEDER" Height="24" />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="0"  Text="OUTLINE (LINE SUPPORTER):" TextWrapping="Wrap" />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtOUTLINE_LINE_SUPPORTER_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" x:Name="txtOUTLINE_LINE_SUPPORTER"   />
+                                <TextBox Foreground="White"  TextChanged="TxtOUTLINE_LINE_SUPPORTER_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" x:Name="txtOUTLINE_LINE_SUPPORTER"   />
 
-                                <TextBlock  FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="0" Text="SUPERVISOR MANPOWER:" TextWrapping="Wrap"/>
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtSUPERVISOR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right"  x:Name="txtSUPERVISOR" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1"  />
+                                <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="0" Text="SUPERVISOR MANPOWER:" TextWrapping="Wrap"/>
+                                <TextBox Foreground="White"  TextChanged="TxtSUPERVISOR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right"  x:Name="txtSUPERVISOR" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1"  />
 
-                                <TextBlock  FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="0" Text="LINE IN-CHARGE:" TextWrapping="Wrap"  />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtLINE_IN_CHARGE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right"   VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" x:Name="txtLINE_IN_CHARGE"  />
+                                <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="0" Text="LINE IN-CHARGE:" TextWrapping="Wrap"  />
+                                <TextBox Foreground="White"  TextChanged="TxtLINE_IN_CHARGE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right"   VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" x:Name="txtLINE_IN_CHARGE"  />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="0" Text="USED AS OBSERVER:" TextWrapping="Wrap"  />
-                                <TextBox  Text="0" Foreground="White"  Background="Green" TextChanged="TxtUSED_AS_OBSERVER_MANPOWER_TextChanged"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" x:Name="txtUSED_AS_OBSERVER_MANPOWER"  />
+                                <TextBox  Foreground="White"  Background="Green" TextChanged="TxtUSED_AS_OBSERVER_MANPOWER_TextChanged"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" x:Name="txtUSED_AS_OBSERVER_MANPOWER"  />
 
                             </Grid>
                         </GroupBox>
@@ -264,16 +264,16 @@
                                     <RowDefinition Height="30"/>
                                 </Grid.RowDefinitions>
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0"  Text="INLINE MANPOWER:" TextWrapping="Wrap" />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtINLINE_MANPOWER_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  x:Name="txtINLINE_MANPOWER" />
+                                <TextBox Foreground="White"  TextChanged="TxtINLINE_MANPOWER_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  x:Name="txtINLINE_MANPOWER" />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" Text="OFFLINE (LINE PARTS FEEDER) MANHOUR :" TextWrapping="Wrap" />
-                                <TextBox  Text="0" Foreground="White"  TextChanged="TxtOFFLINE_LINE_PARTS_FEEDER_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" x:Name="txtOFFLINE_LINE_PARTS_FEEDER_MANHOUR"   />
+                                <TextBox Foreground="White"  TextChanged="TxtOFFLINE_LINE_PARTS_FEEDER_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" x:Name="txtOFFLINE_LINE_PARTS_FEEDER_MANHOUR"   />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0" Text="OUTLINE (LINE SUPPORTER) MANHOUR:" TextWrapping="Wrap"  />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtOUTLINE_LINE_SUPPORTER_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1"  x:Name="txtOUTLINE_LINE_SUPPORTER_MANHOUR" />
+                                <TextBox Foreground="White"  TextChanged="TxtOUTLINE_LINE_SUPPORTER_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1"  x:Name="txtOUTLINE_LINE_SUPPORTER_MANHOUR" />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="0" Text="SUPERVISOR (MANHOUR):" TextWrapping="Wrap" />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtSUPERVISOR_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" x:Name="txtSUPERVISOR_MANHOUR"  />
+                                <TextBox Foreground="White"  TextChanged="TxtSUPERVISOR_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" x:Name="txtSUPERVISOR_MANHOUR"  />
 
                             </Grid>
                         </GroupBox>
@@ -290,10 +290,10 @@
 
                                 </Grid.RowDefinitions>
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  Text="NPD DIRECT HOUR:" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="0,0,85,30" Grid.RowSpan="2" />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtINLINE_MANPOWER_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="2"  x:Name="txtNPDDirecthour" />
+                                <TextBox Foreground="White"  TextChanged="TxtINLINE_MANPOWER_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="2"  x:Name="txtNPDDirecthour" />
 
                                 <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Text="NPD EXCLUDE HOUR :" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="0,0,85,-1" />
-                                <TextBox Text="0" Foreground="White"  TextChanged="TxtOFFLINE_LINE_PARTS_FEEDER_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" x:Name="txtNPDExcludeHour"   />
+                                <TextBox Foreground="White"  TextChanged="TxtOFFLINE_LINE_PARTS_FEEDER_MANHOUR_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" x:Name="txtNPDExcludeHour"   />
 
 
                             </Grid>
@@ -318,40 +318,40 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Text="INLINE MANPOWER TAKEN FROM BANK:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtINLINE_MANPOWER_TAKEN_FROM_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  x:Name="txtINLINE_MANPOWER_TAKEN_FROM_BANK"  />
+                            <TextBox Foreground="White"  TextChanged="TxtINLINE_MANPOWER_TAKEN_FROM_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1"  x:Name="txtINLINE_MANPOWER_TAKEN_FROM_BANK"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0"  Text="INLINE BORROWED AFTER MAN POWER BANKING:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtINLINE_BORROWED_AFTER_MAN_POWER_BANKING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" x:Name="txtINLINE_BORROWED_AFTER_MAN_POWER_BANKING"  />
+                            <TextBox Foreground="White"  TextChanged="TxtINLINE_BORROWED_AFTER_MAN_POWER_BANKING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" x:Name="txtINLINE_BORROWED_AFTER_MAN_POWER_BANKING"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0"  Text="OFFLINE(MIZ) MANPOWER TAKEN FROM BANK:" TextWrapping="Wrap"/>
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtOFFLINE_MIZ_MANPOWER_TAKEN_FROM_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" x:Name="txtOFFLINE_MIZ_MANPOWER_TAKEN_FROM_BANK" />
+                            <TextBox Foreground="White"  TextChanged="TxtOFFLINE_MIZ_MANPOWER_TAKEN_FROM_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" x:Name="txtOFFLINE_MIZ_MANPOWER_TAKEN_FROM_BANK" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="0" Text="OFFLINE(MIZ) BORROWED AFTER MAN POWER BANKING:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtOFFLINE_MIZ_BORROWED_AFTER_MAN_POWER_BANKING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" x:Name="txtOFFLINE_MIZ_BORROWED_AFTER_MAN_POWER_BANKING"   />
+                            <TextBox Foreground="White"  TextChanged="TxtOFFLINE_MIZ_BORROWED_AFTER_MAN_POWER_BANKING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" x:Name="txtOFFLINE_MIZ_BORROWED_AFTER_MAN_POWER_BANKING"   />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="0" Text="OUTLINE (SUPPORTER) TAKEN FROM OTHER LINES:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtOUTLINE_SUPPORTER_TAKEN_FROM_OTHER_LINES_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" x:Name="txtOUTLINE_SUPPORTER_TAKEN_FROM_OTHER_LINES" />
+                            <TextBox Foreground="White"  TextChanged="TxtOUTLINE_SUPPORTER_TAKEN_FROM_OTHER_LINES_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" x:Name="txtOUTLINE_SUPPORTER_TAKEN_FROM_OTHER_LINES" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="0" Text="DIRECT MP WORKED IN LINE (TL / GL / SL / QA / LOGISTICS - BELOW AM):" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtDIRECT_MP_WORKED_IN_LINE_TL_GL_SL_QA_LOGISTICS_BELOW_AM_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1"  x:Name="txtDIRECT_MP_WORKED_IN_LINE_TL_GL_SL_QA_LOGISTICS_BELOW_AM" />
+                            <TextBox Foreground="White"  TextChanged="TxtDIRECT_MP_WORKED_IN_LINE_TL_GL_SL_QA_LOGISTICS_BELOW_AM_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1"  x:Name="txtDIRECT_MP_WORKED_IN_LINE_TL_GL_SL_QA_LOGISTICS_BELOW_AM" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="2" Text="INLINE MP GIVEN TO BANK:" TextWrapping="Wrap"   />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtINLINE_MP_GIVEN_TO_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="3"  x:Name="txtINLINE_MP_GIVEN_TO_BANK" Height="24"  />
+                            <TextBox Foreground="White"  TextChanged="TxtINLINE_MP_GIVEN_TO_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="3"  x:Name="txtINLINE_MP_GIVEN_TO_BANK" Height="24"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" Text="OFFLINE(MIZ) GIVEN TO BANK:" TextWrapping="Wrap"  />
-                            <TextBox  Text="0" Foreground="White"  TextChanged="TxtOFFLINE_MIZ_GIVEN_TO_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" x:Name="txtOFFLINE_MIZ_GIVEN_TO_BANK"  />
+                            <TextBox Foreground="White"  TextChanged="TxtOFFLINE_MIZ_GIVEN_TO_BANK_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" x:Name="txtOFFLINE_MIZ_GIVEN_TO_BANK"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="2" Text="OUTLINE (SUPPORTER) LENDING:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtOUTLINE_SUPPORTER_LENDING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="3" x:Name="txtOUTLINE_SUPPORTER_LENDING"  />
+                            <TextBox Foreground="White"  TextChanged="TxtOUTLINE_SUPPORTER_LENDING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="3" x:Name="txtOUTLINE_SUPPORTER_LENDING"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="2" Text="INLINE MP LENDING AFTER MAN POWER BANKING:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"   TextChanged="TxtINLINEMPLENDINGAFTERMANPOWERBANKING_TextChanged" Background="Green"   Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="3" x:Name="txtINLINEMPLENDINGAFTERMANPOWERBANKING"   />
+                            <TextBox Foreground="White"   TextChanged="TxtINLINEMPLENDINGAFTERMANPOWERBANKING_TextChanged" Background="Green"   Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="3" x:Name="txtINLINEMPLENDINGAFTERMANPOWERBANKING"   />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="2" Text="OFFLINE(MIZ) LENDING AFTER MAN POWER BANKING:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtOFFLINE_MIZ_LENDING_AFTER_MAN_POWER_BANKING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="3" x:Name="txtOFFLINE_MIZ_LENDING_AFTER_MAN_POWER_BANKING" />
+                            <TextBox Foreground="White"  TextChanged="TxtOFFLINE_MIZ_LENDING_AFTER_MAN_POWER_BANKING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="3" x:Name="txtOFFLINE_MIZ_LENDING_AFTER_MAN_POWER_BANKING" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="2" Text="INDIRECT WORKED IN LINE (Prod./Logi/QA - above AM ther dept members):" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtINDIRECT_WORKED_IN_LINE_Prod_Logi_QA_above_AM_Other_dept_members_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="3" x:Name="txtINDIRECT_WORKED_IN_LINE_Prod_Logi_QA_above_AM_Other_dept_members"></TextBox>
+                            <TextBox Foreground="White"  TextChanged="TxtINDIRECT_WORKED_IN_LINE_Prod_Logi_QA_above_AM_Other_dept_members_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="3" x:Name="txtINDIRECT_WORKED_IN_LINE_Prod_Logi_QA_above_AM_Other_dept_members"></TextBox>
 
                         </Grid>
                     </GroupBox>
@@ -379,82 +379,82 @@
                                 <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Text="ON JOB TRAINING (3 DAYS-NEW ENTRY TO COMPANY):" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1" x:Name="txtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY" />
+                            <TextBox Foreground="White"  TextChanged="TxtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1" x:Name="txtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" Text="EXCESS MP AFTER MP CALCULATION:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtEXCESS_MP_AFTER_MP_CALCULATION_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1"  x:Name="txtEXCESS_MP_AFTER_MP_CALCULATION" />
+                            <TextBox Foreground="White"  TextChanged="TxtEXCESS_MP_AFTER_MP_CALCULATION_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1"  x:Name="txtEXCESS_MP_AFTER_MP_CALCULATION" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="0" Text="OTHER TRAININGS (BY HR, TIE, PE, QA, MNT etc):" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtOTHER_TRAININGS_BY_HR_TIE_PE_QA_MNT_etc_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" x:Name="txtOTHER_TRAININGS_BY_HR_TIE_PE_QA_MNT_etc"  />
+                            <TextBox Foreground="White"  TextChanged="TxtOTHER_TRAININGS_BY_HR_TIE_PE_QA_MNT_etc_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" x:Name="txtOTHER_TRAININGS_BY_HR_TIE_PE_QA_MNT_etc"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="0" Text="MULTISKILLING:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtMULTISKILLING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" x:Name="txtMULTISKILLING"/>
+                            <TextBox Foreground="White"  TextChanged="TxtMULTISKILLING_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" x:Name="txtMULTISKILLING"/>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="0" Text="ALL HANDS / PARASPARA / OTHER COMPANY ACTIVITY:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtALL_HANDS_PARASPARA_OTHER_COMPANY_ACTIVITY_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" x:Name="txtALL_HANDS_PARASPARA_OTHER_COMPANY_ACTIVITY"  />
+                            <TextBox Foreground="White"  TextChanged="TxtALL_HANDS_PARASPARA_OTHER_COMPANY_ACTIVITY_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" x:Name="txtALL_HANDS_PARASPARA_OTHER_COMPANY_ACTIVITY"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="0" Text="SKILL COMPETETION / QCC / BUSINESS TRIP:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtSKILL_COMPETETION_QCC_BUSINESS_TRIP_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1" x:Name="txtSKILL_COMPETETION_QCC_BUSINESS_TRIP"  />
+                            <TextBox Foreground="White"  TextChanged="TxtSKILL_COMPETETION_QCC_BUSINESS_TRIP_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="1" x:Name="txtSKILL_COMPETETION_QCC_BUSINESS_TRIP"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="0" Text="INVENTORY:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtINVENTORY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" x:Name="txtINVENTORY"  />
+                            <TextBox Foreground="White"  TextChanged="TxtINVENTORY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" x:Name="txtINVENTORY"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="0" Text="PLANNED / SPECIAL 5S:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtPLANNED_SPECIAL_5S_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" x:Name="txtPLANNED_SPECIAL_5S"  />
+                            <TextBox Foreground="White"  TextChanged="TxtPLANNED_SPECIAL_5S_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" x:Name="txtPLANNED_SPECIAL_5S"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="0" Text="DELAY ARRIVAL / EARLY LEAVE (PAYMENT CUT/LEAVE):" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtDELAY_ARRIVAL_EARLY_LEAVE_PAYMENT_CUT_LEAVE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="1" x:Name="txtDELAY_ARRIVAL_EARLY_LEAVE_PAYMENT_CUT_LEAVE"  />
+                            <TextBox Foreground="White"  TextChanged="TxtDELAY_ARRIVAL_EARLY_LEAVE_PAYMENT_CUT_LEAVE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="1" x:Name="txtDELAY_ARRIVAL_EARLY_LEAVE_PAYMENT_CUT_LEAVE"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="9" Grid.Column="0" Text="PLANNED TRIAL BY PE:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtPLANNED_TRIAL_BY_PE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="9" Grid.Column="1" x:Name="txtPLANNED_TRIAL_BY_PE" />
+                            <TextBox Foreground="White"  TextChanged="TxtPLANNED_TRIAL_BY_PE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="9" Grid.Column="1" x:Name="txtPLANNED_TRIAL_BY_PE" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="10" Grid.Column="0" Text="ENERGY SHUTDOWN (GOVT POWER ONLY):" TextWrapping="Wrap"/>
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtENERGY_SHUTDOWN_GOVT_POWER_ONLY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="10" Grid.Column="1" x:Name="txtENERGY_SHUTDOWN_GOVT_POWER_ONLY"   />
+                            <TextBox Foreground="White"  TextChanged="TxtENERGY_SHUTDOWN_GOVT_POWER_ONLY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="10" Grid.Column="1" x:Name="txtENERGY_SHUTDOWN_GOVT_POWER_ONLY"   />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="11" Grid.Column="0" Text="FIRE ASSEMBLY / EVACUATION DRILL:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtFIRE_ASSEMBLY_EVACUATION_DRILL_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="11" Grid.Column="1" x:Name="txtFIRE_ASSEMBLY_EVACUATION_DRILL"  />
+                            <TextBox Foreground="White"  TextChanged="TxtFIRE_ASSEMBLY_EVACUATION_DRILL_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="11" Grid.Column="1" x:Name="txtFIRE_ASSEMBLY_EVACUATION_DRILL"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="12" Grid.Column="0" Text="NPD TRIALS:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtNPD_TRIALS_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="12" Grid.Column="1" x:Name="txtNPD_TRIALS" />
+                            <TextBox Foreground="White"  TextChanged="TxtNPD_TRIALS_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="12" Grid.Column="1" x:Name="txtNPD_TRIALS" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="2" Text="MEDICAL CHECKUP / OTHER PLANNED ACTIVITY BY HR:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtMEDICAL_CHECKUP_OTHER_PLANNED_ACTIVITY_BY_HR_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="3" x:Name="txtMEDICAL_CHECKUP_OTHER_PLANNED_ACTIVITY_BY_HR" />
+                            <TextBox Foreground="White"  TextChanged="TxtMEDICAL_CHECKUP_OTHER_PLANNED_ACTIVITY_BY_HR_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="3" x:Name="txtMEDICAL_CHECKUP_OTHER_PLANNED_ACTIVITY_BY_HR" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="2" Text="COMPANY COST SAVING ACTIVITY:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtCOMPANY_COST_SAVING_ACTIVITY_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" x:Name="txtCOMPANY_COST_SAVING_ACTIVITY"  />
+                            <TextBox Foreground="White"  TextChanged="TxtCOMPANY_COST_SAVING_ACTIVITY_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="3" x:Name="txtCOMPANY_COST_SAVING_ACTIVITY"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="2" Text="KANBAN ACHIEVEMENT-EARLY COMPLETION (FIXED FOR THIS MONTH):" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_FIXED_FOR_THIS_MONTH_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="3" x:Name="txtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_FIXED_FOR_THIS_MONTH"  />
+                            <TextBox Foreground="White"  TextChanged="TxtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_FIXED_FOR_THIS_MONTH_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="3" x:Name="txtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_FIXED_FOR_THIS_MONTH"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="2" Text="KANBAN ACHIEVEMENT-EARLY COMPLETION (BASED ON DAY'S CONDITION):" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_BASED_ON_DAYS_CONDITION_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="3" x:Name="txtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_BASED_ON_DAYS_CONDITION"  />
+                            <TextBox Foreground="White"  TextChanged="TxtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_BASED_ON_DAYS_CONDITION_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="3" x:Name="txtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_BASED_ON_DAYS_CONDITION"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="2" Text="NO KANBAN DUE TO CUSTOMER NO PULL:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtNO_KANBAN_DUE_TO_CUSTOMER_NO_PULL_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="3" x:Name="txtNO_KANBAN_DUE_TO_CUSTOMER_NO_PULL"/>
+                            <TextBox Foreground="White"  TextChanged="TxtNO_KANBAN_DUE_TO_CUSTOMER_NO_PULL_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="3" x:Name="txtNO_KANBAN_DUE_TO_CUSTOMER_NO_PULL"/>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="2" Text="PLANNED ACTIVITY BY MAINTENANCE:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtPLANNED_ACTIVITY_BY_MAINTENANCE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="3" x:Name="txtPLANNED_ACTIVITY_BY_MAINTENANCE"/>
+                            <TextBox Foreground="White"  TextChanged="TxtPLANNED_ACTIVITY_BY_MAINTENANCE_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="5" Grid.Column="3" x:Name="txtPLANNED_ACTIVITY_BY_MAINTENANCE"/>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="2" Text="PLANNED ACTIVITY BY QA / 2ND QA:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtPLANNED_ACTIVITY_BY_QA_2ND_QA_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="3" x:Name="txtPLANNED_ACTIVITY_BY_QA_2ND_QA"/>
+                            <TextBox Foreground="White"  TextChanged="TxtPLANNED_ACTIVITY_BY_QA_2ND_QA_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="3" x:Name="txtPLANNED_ACTIVITY_BY_QA_2ND_QA"/>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="2" Text="VISITOR / ISO / CUSTOMER AUDIT TIME:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtVISITOR_ISO_CUSTOMER_AUDIT_TIME_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="3" x:Name="txtVISITOR_ISO_CUSTOMER_AUDIT_TIME"/>
+                            <TextBox Foreground="White"  TextChanged="TxtVISITOR_ISO_CUSTOMER_AUDIT_TIME_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="3" x:Name="txtVISITOR_ISO_CUSTOMER_AUDIT_TIME"/>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="2" Text="MAJOR / PLANNED CLEAN UP BEFORE LONG HOLIDAY:" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtMAJOR_PLANNED_CLEAN_UP_BEFORE_LONG_HOLIDAY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="3" x:Name="txtMAJOR_PLANNED_CLEAN_UP_BEFORE_LONG_HOLIDAY"/>
+                            <TextBox Foreground="White"  TextChanged="TxtMAJOR_PLANNED_CLEAN_UP_BEFORE_LONG_HOLIDAY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="8" Grid.Column="3" x:Name="txtMAJOR_PLANNED_CLEAN_UP_BEFORE_LONG_HOLIDAY"/>
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="9" Grid.Column="2" Text="IMPROVEMENT ACTIVITY (KAIZEN/LAYOUT CHANGE etc):" TextWrapping="Wrap"  />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtIMPROVEMENT_ACTIVITY_KAIZEN_LAYOUT_CHANGE_etc_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="9" Grid.Column="3"  x:Name="txtIMPROVEMENT_ACTIVITY_KAIZEN_LAYOUT_CHANGE_etc" />
+                            <TextBox Foreground="White"  TextChanged="TxtIMPROVEMENT_ACTIVITY_KAIZEN_LAYOUT_CHANGE_etc_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="9" Grid.Column="3"  x:Name="txtIMPROVEMENT_ACTIVITY_KAIZEN_LAYOUT_CHANGE_etc" />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="10" Grid.Column="2" Text="PLANNED SNACKS BREAK AS PER HR POLICY:" TextWrapping="Wrap" />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="10" Grid.Column="3" x:Name="txtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY"  />
+                            <TextBox Foreground="White"  TextChanged="TxtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY_TextChanged" Background="Green"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="10" Grid.Column="3" x:Name="txtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="11" Grid.Column="2" Text="5S (BANK RETURNED MP):" TextWrapping="Wrap"   />
-                            <TextBox Text="0" Foreground="White"  TextChanged="TxtA5S_BANK_RETURNED_MP_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="11" Grid.Column="3" x:Name="txtA5S_BANK_RETURNED_MP"  />
+                            <TextBox Foreground="White"  TextChanged="TxtA5S_BANK_RETURNED_MP_TextChanged" Background="Green" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="11" Grid.Column="3" x:Name="txtA5S_BANK_RETURNED_MP"  />
 
                             <TextBlock FontSize="14" Foreground="Navy" FontWeight="Bold" FontFamily="calibri" HorizontalAlignment="Right" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="12" Grid.Column="2" Text="MULTISKILLING (BANK RETURNED MP):" TextWrapping="Wrap" />
-                            <TextBox Text="0"  Foreground="White"  Background="Green" TextChanged="TxtMULTISKILLING_BANK_RETURNED_MP_TextChanged"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="12" Grid.Column="3" x:Name="txtMULTISKILLING_BANK_RETURNED_MP" />
+                            <TextBox  Foreground="White"  Background="Green" TextChanged="TxtMULTISKILLING_BANK_RETURNED_MP_TextChanged"  Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="12" Grid.Column="3" x:Name="txtMULTISKILLING_BANK_RETURNED_MP" />
 
                         </Grid>
                     </GroupBox>

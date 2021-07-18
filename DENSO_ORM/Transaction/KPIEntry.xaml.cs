@@ -1515,7 +1515,7 @@ namespace DENSO_ORM.Transaction
                   Convert.ToDecimal(txtINLINEMPLENDINGAFTERMANPOWERBANKING.Text) -
                   (Convert.ToDecimal(txtINLINE_OPERATOR.Text) * Convert.ToDecimal(txtBREAK_TIME_WITHOUT_LUNCH)), 2).ToString();
 
-                txtTotalStandardHour = (Convert.ToDecimal(txtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY.Text) + txtFIXED_TIME + txtLINE_IN_CHARGE_MAN_HOURS + txtOUTLINEDH).ToString();
+                txtTotalStandardHour = Math.Round(Convert.ToDecimal(txtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY.Text) + Convert.ToDecimal(txtFIXED_TIME) + Convert.ToDecimal(txtLINE_IN_CHARGE_MAN_HOURS) + Convert.ToDecimal(txtOUTLINEDH),2).ToString();
 
                 txtGOOD_PRODUCTON_HRS.Text = Math.Round((TotalStdTime * TotalQty) / 3600, 2).ToString();
                 txtPART_REJECTION_SCRAP_REWORK.Text = Math.Round((TotalStdTime * TotalRejQty) / 3600, 2).ToString();

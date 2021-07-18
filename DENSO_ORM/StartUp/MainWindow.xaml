@@ -34,7 +34,7 @@
             </Image>
         </Grid>
        
-        <Grid Name="GridSubMenu" Margin="295,150,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid Name="GridSubMenu" Margin="295,110,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="205"></ColumnDefinition>
                 <ColumnDefinition Width="205"></ColumnDefinition>

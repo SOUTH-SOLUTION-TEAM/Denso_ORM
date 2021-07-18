@@ -68,7 +68,7 @@ namespace BUSINESS_LAYER.Masters
         {
             try
             {
-                return obj_DB.ExecuteProcedureParam("Proc_MachineGroupMaster", ENTITY_LAYER.Masters.Masters.MachineGrID, ENTITY_LAYER.Masters.Masters.MachineGroup, ENTITY_LAYER.Masters.Masters.MachineName, ENTITY_LAYER.Masters.Masters.MachineOperation, ENTITY_LAYER.Masters.Masters.BaseGhratio, ENTITY_LAYER.Masters.Masters.Status, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Masters.Masters.Type, ENTITY_LAYER.Masters.Masters.Section);
+                return obj_DB.ExecuteProcedureParam("Proc_MachineGroupMaster", ENTITY_LAYER.Masters.Masters.MachineGrID, ENTITY_LAYER.Masters.Masters.MachineGroup, ENTITY_LAYER.Masters.Masters.MachineName, ENTITY_LAYER.Masters.Masters.MachineOperation, ENTITY_LAYER.Masters.Masters.BaseGhratio, ENTITY_LAYER.Masters.Masters.Status, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Masters.Masters.Type, ENTITY_LAYER.Masters.Masters.Section, ENTITY_LAYER.Masters.Masters.MachineType);
             }
             catch (Exception ex)
             {
@@ -79,7 +79,7 @@ namespace BUSINESS_LAYER.Masters
         {
             try
             {
-                return obj_DB.ExecuteDataSetParam("Proc_MachineGroupMaster", ENTITY_LAYER.Masters.Masters.MachineGrID, ENTITY_LAYER.Masters.Masters.MachineGroup, ENTITY_LAYER.Masters.Masters.MachineName, ENTITY_LAYER.Masters.Masters.MachineOperation, ENTITY_LAYER.Masters.Masters.BaseGhratio, ENTITY_LAYER.Masters.Masters.Status, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Masters.Masters.Type, ENTITY_LAYER.Masters.Masters.Section);
+                return obj_DB.ExecuteDataSetParam("Proc_MachineGroupMaster", ENTITY_LAYER.Masters.Masters.MachineGrID, ENTITY_LAYER.Masters.Masters.MachineGroup, ENTITY_LAYER.Masters.Masters.MachineName, ENTITY_LAYER.Masters.Masters.MachineOperation, ENTITY_LAYER.Masters.Masters.BaseGhratio, ENTITY_LAYER.Masters.Masters.Status, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Masters.Masters.Type, ENTITY_LAYER.Masters.Masters.Section, ENTITY_LAYER.Masters.Masters.MachineType);
             }
             catch (Exception ex)
             {
