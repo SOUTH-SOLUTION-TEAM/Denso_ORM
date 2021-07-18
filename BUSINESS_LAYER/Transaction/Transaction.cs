@@ -244,7 +244,12 @@ namespace BUSINESS_LAYER.Transaction
                 ENTITY_LAYER.Transaction.Transaction.MIZ_DH,
                 ENTITY_LAYER.Transaction.Transaction.OUTLINE_DH,
                 ENTITY_LAYER.Transaction.Transaction.FQA_GH,
-                ENTITY_LAYER.Transaction.Transaction.INLINE_MP_LENDING_AFTER_MAN_POWER_BANKING, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type, ENTITY_LAYER.Transaction.Transaction.Shiftname, ENTITY_LAYER.Transaction.Transaction.FromDate, ENTITY_LAYER.Transaction.Transaction.Todate, ENTITY_LAYER.Transaction.Transaction.NPDDIRHR, ENTITY_LAYER.Transaction.Transaction.NPDEXCHR); 
+                ENTITY_LAYER.Transaction.Transaction.INLINE_MP_LENDING_AFTER_MAN_POWER_BANKING,
+                ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type, 
+                ENTITY_LAYER.Transaction.Transaction.Shiftname, ENTITY_LAYER.Transaction.Transaction.FromDate,
+                ENTITY_LAYER.Transaction.Transaction.Todate, ENTITY_LAYER.Transaction.Transaction.NPDDIRHR,
+                ENTITY_LAYER.Transaction.Transaction.NPDEXCHR, ENTITY_LAYER.Transaction.Transaction.ImporvedGoodHour, 
+                ENTITY_LAYER.Transaction.Transaction.StandardHours, ENTITY_LAYER.Transaction.Transaction.NonStandardHour, ENTITY_LAYER.Transaction.Transaction.TotalStandardHour);
             }
             catch (Exception ex)
             {
@@ -353,7 +358,8 @@ namespace BUSINESS_LAYER.Transaction
                 ENTITY_LAYER.Transaction.Transaction.MIZ_DH,
                 ENTITY_LAYER.Transaction.Transaction.OUTLINE_DH,
                 ENTITY_LAYER.Transaction.Transaction.FQA_GH,
-                ENTITY_LAYER.Transaction.Transaction.INLINE_MP_LENDING_AFTER_MAN_POWER_BANKING, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type, ENTITY_LAYER.Transaction.Transaction.Shiftname, ENTITY_LAYER.Transaction.Transaction.FromDate, ENTITY_LAYER.Transaction.Transaction.Todate, ENTITY_LAYER.Transaction.Transaction.NPDDIRHR, ENTITY_LAYER.Transaction.Transaction.NPDEXCHR);
+                ENTITY_LAYER.Transaction.Transaction.INLINE_MP_LENDING_AFTER_MAN_POWER_BANKING, ENTITY_LAYER.Login.Login.UserID, ENTITY_LAYER.Transaction.Transaction.Type, ENTITY_LAYER.Transaction.Transaction.Shiftname, ENTITY_LAYER.Transaction.Transaction.FromDate, ENTITY_LAYER.Transaction.Transaction.Todate, ENTITY_LAYER.Transaction.Transaction.NPDDIRHR, ENTITY_LAYER.Transaction.Transaction.NPDEXCHR, ENTITY_LAYER.Transaction.Transaction.ImporvedGoodHour,
+                ENTITY_LAYER.Transaction.Transaction.StandardHours, ENTITY_LAYER.Transaction.Transaction.NonStandardHour, ENTITY_LAYER.Transaction.Transaction.TotalStandardHour);
             }
             catch (Exception ex)
             {

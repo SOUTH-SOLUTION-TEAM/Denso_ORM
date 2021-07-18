@@ -38,7 +38,7 @@ namespace DENSO_ORM.Transaction
               , txtTEA_BREAK_10_Minutes = "0", txtTEA_BREAK_10_Minutes1 = "0", txtA5S_CLOSING_5_Minutes = "0", txtBREAK_TIME_WITHOUT_LUNCH = "0", txtFIXED_TIME = "", 
             txtDIRECT_MANPOWER = "0", txtAVAIABLE_WORKING_HRS = "0", txtGOOD_PRODUCTON_HRS_FOR_DAY = "0", txtTOTAL_LOSS_HRS_FOR_DAY = "0", txtTOTAL_LOSS_HRS_RATIO = "0", 
             txtLINE_IN_CHARGE_MAN_HOURS = "0", txtKPI = "0", txtDIRECT_HRS = "0", txtGOOD_HRS = "0", txtBASE_GH_RATIO = "0.88", txtDIRECT_HRS1 = "0", 
-            txtGOOD_HRS1 = "0", txtGH_AGAINST_BASE1 = "0", txtTotalBase="0", txtTotalStd = "0", txtDPR1 = "0", txtLHR_DAILY = "0", txtLEND = "0", txtBANK = "0", txtOJT = "0", txtEXCLUDE = "0", txtPURE_EXCLUDE = "0", txtMIZDH = "0", txtOUTLINEDH = "0", txtFQAGH = "0", txtUSEDASOBSERVERMANHOUR="0";
+            txtGOOD_HRS1 = "0", txtGH_AGAINST_BASE1 = "0", txtTotalBase="0", txtTotalStd = "0", txtDPR1 = "0", txtLHR_DAILY = "0", txtLEND = "0", txtBANK = "0", txtOJT = "0", txtEXCLUDE = "0", txtPURE_EXCLUDE = "0", txtMIZDH = "0", txtOUTLINEDH = "0", txtFQAGH = "0", txtUSEDASOBSERVERMANHOUR="0", txtImporvedGoodHour="0",txtStandardHours="0",txtTotalStandardHour="0",txtNonStandardHour="0";
 
 
         #endregion
@@ -834,6 +834,7 @@ namespace DENSO_ORM.Transaction
                 txtlinegrp.Text = CommonClasses.CommonVariable.MachineGroup;
                 txtlinename.Text = CommonClasses.CommonVariable.MachineName;
                 Transaction("LoadDetails");
+                Calculation();
                 txtTOTAL_MANPOWER_GIVEN_BY_COMPANY.Focus();
 
             }
@@ -952,6 +953,10 @@ namespace DENSO_ORM.Transaction
                 ENTITY_LAYER.Transaction.Transaction.Type = Type;
                 ENTITY_LAYER.Transaction.Transaction.NPDDIRHR = txtNPDDirecthour.Text;
                 ENTITY_LAYER.Transaction.Transaction.NPDEXCHR = txtNPDExcludeHour.Text;
+                ENTITY_LAYER.Transaction.Transaction.ImporvedGoodHour = txtImporvedGoodHour;
+                ENTITY_LAYER.Transaction.Transaction.StandardHours = txtStandardHours;
+                ENTITY_LAYER.Transaction.Transaction.TotalStandardHour = txtTotalStandardHour;
+                ENTITY_LAYER.Transaction.Transaction.NonStandardHour = txtNonStandardHour;
                 CommonClasses.CommonVariable.Result = obj_Trns.BL_KPIEntryTransaction();
                 if (CommonClasses.CommonVariable.Result == "Saved")
                 {
@@ -1413,6 +1418,36 @@ namespace DENSO_ORM.Transaction
                 txtBASE_GH_RATIO = "0";
 
             }
+            else if (txtNPDDirecthour.Text == "")
+            {
+                txtNPDDirecthour.Text = "0";
+
+            }
+            else if (txtNPDExcludeHour.Text == "")
+            {
+                txtNPDExcludeHour.Text = "0";
+
+            }
+            else if (txtImporvedGoodHour == "")
+            {
+                txtImporvedGoodHour = "0";
+
+            }
+            else if (txtStandardHours == "")
+            {
+                txtStandardHours = "0";
+
+            }
+            else if (txtTotalStandardHour == "")
+            {
+                txtTotalStandardHour = "0";
+
+            }
+            else if (txtNonStandardHour == "")
+            {
+                txtNonStandardHour = "0";
+
+            }
             else
             {
                 txtNON_PRESENCE_HRS_DIRECT_EXCLUDE_HOURS.Text = Math.Round(Convert.ToDecimal(txtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY.Text) +
@@ -1442,6 +1477,32 @@ namespace DENSO_ORM.Transaction
                       Convert.ToDecimal(txtA5S_BANK_RETURNED_MP.Text) +
                       Convert.ToDecimal(txtMULTISKILLING_BANK_RETURNED_MP.Text), 2).ToString();
 
+                txtNonStandardHour = Math.Round(Convert.ToDecimal(txtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY.Text) +
+                     Convert.ToDecimal(txtEXCESS_MP_AFTER_MP_CALCULATION.Text) +
+                     Convert.ToDecimal(txtOTHER_TRAININGS_BY_HR_TIE_PE_QA_MNT_etc.Text) +
+                     Convert.ToDecimal(txtMULTISKILLING.Text) +
+                     Convert.ToDecimal(txtALL_HANDS_PARASPARA_OTHER_COMPANY_ACTIVITY.Text) +
+                     Convert.ToDecimal(txtSKILL_COMPETETION_QCC_BUSINESS_TRIP.Text) +
+                     Convert.ToDecimal(txtINVENTORY.Text) +
+                     Convert.ToDecimal(txtPLANNED_SPECIAL_5S.Text) +
+                     Convert.ToDecimal(txtDELAY_ARRIVAL_EARLY_LEAVE_PAYMENT_CUT_LEAVE.Text) +
+                     Convert.ToDecimal(txtPLANNED_TRIAL_BY_PE.Text) +
+                     Convert.ToDecimal(txtENERGY_SHUTDOWN_GOVT_POWER_ONLY.Text) +
+                     Convert.ToDecimal(txtFIRE_ASSEMBLY_EVACUATION_DRILL.Text) +
+                     Convert.ToDecimal(txtNPD_TRIALS.Text) +
+                     Convert.ToDecimal(txtMEDICAL_CHECKUP_OTHER_PLANNED_ACTIVITY_BY_HR.Text) +
+                     Convert.ToDecimal(txtCOMPANY_COST_SAVING_ACTIVITY.Text) +
+                     Convert.ToDecimal(txtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_FIXED_FOR_THIS_MONTH.Text) +
+                     Convert.ToDecimal(txtKANBAN_ACHIEVEMENT_EARLY_COMPLETION_BASED_ON_DAYS_CONDITION.Text) +
+                     Convert.ToDecimal(txtNO_KANBAN_DUE_TO_CUSTOMER_NO_PULL.Text) +
+                     Convert.ToDecimal(txtPLANNED_ACTIVITY_BY_MAINTENANCE.Text) +
+                     Convert.ToDecimal(txtPLANNED_ACTIVITY_BY_QA_2ND_QA.Text) +
+                     Convert.ToDecimal(txtVISITOR_ISO_CUSTOMER_AUDIT_TIME.Text) +
+                     Convert.ToDecimal(txtMAJOR_PLANNED_CLEAN_UP_BEFORE_LONG_HOLIDAY.Text) +
+                     Convert.ToDecimal(txtIMPROVEMENT_ACTIVITY_KAIZEN_LAYOUT_CHANGE_etc.Text) +
+                     Convert.ToDecimal(txtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY.Text) +
+                     Convert.ToDecimal(txtA5S_BANK_RETURNED_MP.Text), 2).ToString();
+
                 txtAVAIABLE_WORKING_DIRECT_HRS.Text = Math.Round(Convert.ToDecimal(txtINLINE_OPERATOR.Text) *
                   Convert.ToDecimal(txtTOTAL_WORKING_HOURS) +
                   Convert.ToDecimal(txtINLINE_MANPOWER.Text) +
@@ -1454,6 +1515,8 @@ namespace DENSO_ORM.Transaction
                   Convert.ToDecimal(txtINLINEMPLENDINGAFTERMANPOWERBANKING.Text) -
                   (Convert.ToDecimal(txtINLINE_OPERATOR.Text) * Convert.ToDecimal(txtBREAK_TIME_WITHOUT_LUNCH)), 2).ToString();
 
+                txtTotalStandardHour = (Convert.ToDecimal(txtPLANNED_SNACKS_BREAK_AS_PER_HR_POLICY.Text) + txtFIXED_TIME + txtLINE_IN_CHARGE_MAN_HOURS + txtOUTLINEDH).ToString();
+
                 txtGOOD_PRODUCTON_HRS.Text = Math.Round((TotalStdTime * TotalQty) / 3600, 2).ToString();
                 txtPART_REJECTION_SCRAP_REWORK.Text = Math.Round((TotalStdTime * TotalRejQty) / 3600, 2).ToString();
                 txtGH_AGAINST_BASE.Text = Math.Round((TotalBaseTime * TotalQty) / 3600, 2).ToString();
@@ -1463,7 +1526,7 @@ namespace DENSO_ORM.Transaction
                 txtDIRECT_HRS = txtAVAIABLE_WORKING_HRS;
                 txtGOOD_HRS = txtGOOD_PRODUCTON_HRS_FOR_DAY;
                 txtGH_AGAINST_BASE1 = txtGH_AGAINST_BASE.Text;
-                //AVAIABLE WORKING(DIRECT) HRS - GOOD PRODUCTON HRS
+                txtImporvedGoodHour = Math.Round((TotalBaseTime - TotalStdTime) * TotalQty).ToString();             //AVAIABLE WORKING(DIRECT) HRS - GOOD PRODUCTON HRS
                 txtTOTAL_LOSS_HRS.Text = Math.Round(Convert.ToDecimal(txtAVAIABLE_WORKING_DIRECT_HRS.Text) - Convert.ToDecimal(txtGOOD_PRODUCTON_HRS.Text), 2).ToString();
                 if (txtGOOD_PRODUCTON_HRS.Text != "0" && txtAVAIABLE_WORKING_DIRECT_HRS.Text!="0")
                 {
@@ -1500,6 +1563,9 @@ namespace DENSO_ORM.Transaction
                 txtBANK = txtINLINEMPLENDINGAFTERMANPOWERBANKING.Text;
                 txtOJT = txtON_JOB_TRAINING_3_DAYS_NEW_ENTRY_TO_COMPANY.Text;
                 txtEXCLUDE = txtNON_PRESENCE_HRS_DIRECT_EXCLUDE_HOURS.Text;
+                if ( txtGH_AGAINST_BASE.Text != "0" && txtBASE_GH_RATIO != "0")
+                    txtStandardHours = Math.Round((Convert.ToDecimal(txtGH_AGAINST_BASE.Text) / Convert.ToDecimal(txtBASE_GH_RATIO)), 2).ToString();
+
                 if (txtDIRECT_HRS != "0")
                     txtLHR.Text = Math.Round((Convert.ToDecimal(txtDIRECT_HRS) - (Convert.ToDecimal(txtGOOD_HRS)) / Convert.ToDecimal(txtDIRECT_HRS)), 2).ToString();
             }
@@ -1861,6 +1927,10 @@ namespace DENSO_ORM.Transaction
             txtLHR.Text = "0";
             txtNPDDirecthour.Text = "0";
             txtNPDExcludeHour.Text = "0";
+            txtImporvedGoodHour = "0";
+            txtTotalStandardHour = "0";
+            txtNonStandardHour = "0";
+            txtStandardHours = "0";
             RefNo = 0;
         }
         private void btnExit_Click(object sender, RoutedEventArgs e)

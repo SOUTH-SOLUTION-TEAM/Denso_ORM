@@ -21,7 +21,7 @@ _KANBAN_ACHIEVEMENT_EARLY_COMPLETION_FIXED_FOR_THIS_MONTH,_KANBAN_ACHIEVEMENT_EA
 _PLANNED_ACTIVITY_BY_QA_2ND_QA,_VISITOR_ISO_CUSTOMER_AUDIT_TIME,_MAJOR_PLANNED_CLEAN_UP_BEFORE_LONG_HOLIDAY,_IMPROVEMENT_ACTIVITY_KAIZEN_LAYOUT_CHANGE_etc,_PLANNED_SNACKS_BREAK_AS_PER_HR_POLICY,_A5S_BANK_RETURNED_MP,
 _MULTISKILLING_BANK_RETURNED_MP,_NON_PRESENCE_HRS_DIRECT_EXCLUDE_HOURS,_AVAIABLE_WORKING_DIRECT_HRS,_GOOD_PRODUCTON_HRS,_TOTAL_LOSS_HRS,_PART_REJECTION_SCRAP_REWORK,_LOSS_HRS_RATIO,_AVAIABLE_WORKING_HRS,
 _GOOD_PRODUCTON_HRS_FOR_DAY,_TOTAL_LOSS_HRS_FOR_DAY,_TOTAL_LOSS_HRS_RATIO,_LINE_IN_CHARGE,_LINE_IN_CHARGE_MAN_HOURS,_USED_AS_MANPOWER,_USED_AS_MANHOUR,_USED_AS_OBSERVER_MANHOUR,_KPI,_DIRECT_HRS,
-_GOOD_HRS,_DPR,_BASE_GH_RATIO,_GH_AGAINST_BASE,_DIRECT_HRS1,_GOOD_HRS1,_GH_AGAINST_BASE1,_DPR1,_LHR,_LHR_DAILY,_LEND,_BANK,_OJT,_EXCLUDE,_PURE_EXCLUDE,_MIZ_DH,_OUTLINE_DH,_FQA_GH,_INLINE_MP_LENDING_AFTER_MAN_POWER_BANKING, _FromDate, _Todate, _USED_AS_OBSERVER,_Man,_Hour,_OperationName,_OperationType,_NPDDirHr,_NPDExcHr;
+_GOOD_HRS,_DPR,_BASE_GH_RATIO,_GH_AGAINST_BASE,_DIRECT_HRS1,_GOOD_HRS1,_GH_AGAINST_BASE1,_DPR1,_LHR,_LHR_DAILY,_LEND,_BANK,_OJT,_EXCLUDE,_PURE_EXCLUDE,_MIZ_DH,_OUTLINE_DH,_FQA_GH,_INLINE_MP_LENDING_AFTER_MAN_POWER_BANKING, _FromDate, _Todate, _USED_AS_OBSERVER,_Man,_Hour,_OperationName,_OperationType,_NPDDirHr,_NPDExcHr, _ImporvedGoodHour, _StandardHours, _TotalStandardHour, _NonStandardHour;
         #endregion
 
         #region Properties
@@ -151,6 +151,10 @@ _GOOD_HRS,_DPR,_BASE_GH_RATIO,_GH_AGAINST_BASE,_DIRECT_HRS1,_GOOD_HRS1,_GH_AGAIN
         public static string OPERATIONTYPE { get => _OperationType; set => _OperationType = value; }
         public static string NPDDIRHR { get => _NPDDirHr; set => _NPDDirHr = value; }
         public static string NPDEXCHR { get => _NPDExcHr; set => _NPDExcHr = value; }
+        public static string ImporvedGoodHour { get => _ImporvedGoodHour; set => _ImporvedGoodHour = value; }
+        public static string StandardHours { get => _StandardHours; set => _StandardHours = value; }
+        public static string TotalStandardHour { get => _TotalStandardHour; set => _TotalStandardHour = value; }
+        public static string NonStandardHour { get => _NonStandardHour; set => _NonStandardHour = value; }
 
         #endregion
     }
